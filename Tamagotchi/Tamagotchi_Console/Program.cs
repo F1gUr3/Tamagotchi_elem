@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using Tamagotchi_Library.GameManagement;
+
+GameManager Tamagotchi = new GameManager();
+
+Tamagotchi.startGame();

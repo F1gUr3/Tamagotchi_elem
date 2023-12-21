@@ -2325,11 +2325,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
+      "projectUniqueName": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
       "projectName": "Tamagotchi_Test",
-      "projectPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
+      "projectPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
       "packagesPath": "C:\\Users\\Adrián\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Test\\obj\\",
+      "outputPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Adrián\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2346,8 +2346,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {
-              "projectPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Library\\Tamagotchi_Library.csproj"
+            "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {
+              "projectPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj"
             }
           }
         }

@@ -1,0 +1,12 @@
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.deps.json
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.dll
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.pdb
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.AssemblyInfoInputs.cache
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.AssemblyInfo.cs
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.csproj.CoreCompileInputs.cache
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.sourcelink.json
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.dll
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\refint\Tamagotchi_Library.dll
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.pdb
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\ref\Tamagotchi_Library.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {}
+    "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {
+    "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Library\\Tamagotchi_Library.csproj",
+        "projectUniqueName": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj",
         "projectName": "Tamagotchi_Library",
-        "projectPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Library\\Tamagotchi_Library.csproj",
+        "projectPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj",
         "packagesPath": "C:\\Users\\Adrián\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi_Console\\Tamagotchi_Library\\obj\\",
+        "outputPath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Adrián\\AppData\\Roaming\\NuGet\\NuGet.Config",
