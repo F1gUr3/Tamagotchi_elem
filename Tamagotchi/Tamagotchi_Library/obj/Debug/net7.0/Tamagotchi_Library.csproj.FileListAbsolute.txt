@@ -24,3 +24,5 @@ C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamag
 C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\ref\Tamagotchi_Library.dll
 C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\Tiger.cs
 C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\IFeline.cs
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\Tiger.cs
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\IFeline.cs

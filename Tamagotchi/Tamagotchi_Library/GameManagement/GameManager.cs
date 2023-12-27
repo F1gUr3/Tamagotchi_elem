@@ -14,21 +14,48 @@ namespace Tamagotchi_Library.GameManagement
 
         public void startGame()
         {
-            Console.WriteLine("Hogy hívják a tigrised: ");
-            string tamagotchi = Console.ReadLine();
-            Tiger tamagotchiPet = new Tiger(tamagotchi);
+            Console.WriteLine("How is your pet called? ");
+            string nameOfTamagotchi = Console.ReadLine();
 
+            IFeline tamagotchi = choosePet(nameOfTamagotchi);
             while (!hasExit)
             {
-                gameProgress(tamagotchiPet);
+                gameProgress(tamagotchi);
             }
 
+        }
+
+        public IFeline choosePet(string nameOfTamagotchi)
+        {
+            Console.WriteLine("Choose the type of pet: (1) Tiger, (2), Panther, (3) Lion");
+            string petOfChoice = Console.ReadLine();
+            IFeline tamagotchi = null;
+
+            switch (petOfChoice)
+            {
+                case "1":
+                    tamagotchi = new Tiger(nameOfTamagotchi);
+                    break;
+                case "2":
+                    tamagotchi = new Tiger(nameOfTamagotchi);
+                    break;
+                case "3":
+                    tamagotchi = new Tiger(nameOfTamagotchi);
+                    break;
+                default:
+                    Console.WriteLine("Bad input! Try a number between 1-3!");
+                    choosePet(nameOfTamagotchi);
+                    break;
+
+
+            }
+
+            return tamagotchi;
         }
 
         public void gameProgress(IFeline animal)
         {
             animal.Progress();
-            Thread.Sleep(1000);
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
                 switch (choice)

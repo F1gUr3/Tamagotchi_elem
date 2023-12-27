@@ -37,3 +37,5 @@ C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\obj\Debug\net7.0\Tamag
 C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\obj\Debug\net7.0\Tamagotchi_Console.genruntimeconfig.cache
 C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\obj\Debug\net7.0\ref\Tamagotchi_Console.dll
 C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\bin\Debug\net7.0\AnimalManagement\Tiger.cs
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\bin\Debug\net7.0\AnimalManagement\Tiger.cs
+C:\Users\Adrián\Desktop\IT\PROJEKT\FÁNK\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\bin\Debug\net7.0\AnimalManagement\IFeline.cs
