@@ -27,7 +27,7 @@ namespace Tamagotchi_Library.GameManagement
 
         public void gameProgress(IFeline animal)
         {
-            animal.progress();
+            animal.Progress();
             Thread.Sleep(1000);
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
@@ -46,6 +46,9 @@ namespace Tamagotchi_Library.GameManagement
                         animal.Wash();
                         break;
                     case 5:
+                        animal.Eat();
+                        break;
+                    case 6:
                         hasExit = true;
                         break;
                     default:
