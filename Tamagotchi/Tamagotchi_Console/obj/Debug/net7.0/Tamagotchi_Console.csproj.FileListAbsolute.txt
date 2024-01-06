@@ -60,3 +60,4 @@ C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\obj\Debug
 C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\obj\Debug\net7.0\Tamagotchi_Console.pdb
 C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\obj\Debug\net7.0\Tamagotchi_Console.genruntimeconfig.cache
 C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\obj\Debug\net7.0\ref\Tamagotchi_Console.dll
+C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\bin\Debug\net7.0\AnimalManagement\IFeline.cs
