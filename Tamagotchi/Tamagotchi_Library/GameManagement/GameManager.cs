@@ -64,10 +64,6 @@ namespace Tamagotchi_Library.GameManagement
 
             return tamagotchi;
         }
-        //valami cooment mert a github szarakszik
-        //Hátha most jó
-        //vajon most is jo?
-        //elegem van
         public void gameProgress(IFeline animal)
         {
             animal.Progress();
