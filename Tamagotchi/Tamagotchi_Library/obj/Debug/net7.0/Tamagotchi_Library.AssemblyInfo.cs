@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tamagotchi_Library")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d93767a95fbfa7618ab5f1a2ebd738ce84cd385")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tamagotchi_Library")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tamagotchi_Library")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
