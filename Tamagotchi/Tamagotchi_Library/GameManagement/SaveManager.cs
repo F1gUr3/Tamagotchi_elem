@@ -13,12 +13,12 @@ namespace Tamagotchi_Library.GameManagement
     {
 
         List<string> felineData = new List<string>();
-        private string name;
-        private int age;
-        private int hunger;
-        private int thirst;
-        private int happiness;
-        private string type;
+        public string name { get; init; }
+        public int age { get; set; }
+        public int hunger { get; set; }
+        public int thirst { get; set; }
+        public int happiness { get; set; }
+        public string type { get; init; }
         IFeline feline;
 
         [JsonConstructor]
@@ -48,14 +48,35 @@ namespace Tamagotchi_Library.GameManagement
 
         public void saveToJson(string filePath)
         {
-            updateData(feline);
+            updateData(feline); 
 
-            var saveManagerInstance = new SaveManager(feline);
+            string json = JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
+           
+            File.WriteAllText(filePath, json);
+        }
 
-            string toJson = JsonSerializer.Serialize(saveManagerInstance, new JsonSerializerOptions { WriteIndented = true });
+        public static IFeline loadFromJson(string filePath)
+        {
+            IFeline loadedPet = null;
 
-            File.WriteAllText(filePath, toJson);
+            try
+            {
+                string json = File.ReadAllText(filePath);
+                Console.WriteLine(json);
+                loadedPet = JsonSerializer.Deserialize<Tiger>(json);
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading pet from JSON: {ex.Message}");
+            }
+
+
+
+            return loadedPet;
+
 
         }
+
     }
 }

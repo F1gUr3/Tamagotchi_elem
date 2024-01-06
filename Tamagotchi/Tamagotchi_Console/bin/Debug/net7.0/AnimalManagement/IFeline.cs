@@ -8,6 +8,8 @@ namespace Tamagotchi_Library.AnimalManagement
 {
     public interface IFeline
     {
+
+        List<String> getFelineInfo();
         void Progress();
         void Eat();
         void Drink();

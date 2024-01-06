@@ -27,6 +27,24 @@ public class Tiger : IFeline
         isHunting = false;
     }
 
+    public List<string> getFelineInfo()
+    {
+        List<string>felineData = new List<string>
+        {
+            Name,
+            Convert.ToString(age),
+            Convert.ToString(hunger),
+            Convert.ToString(thirst),
+            Convert.ToString(happiness),
+            "Tiger"
+
+        };
+
+        return felineData;
+
+
+    }
+
     public void Progress()
     {
         age++;

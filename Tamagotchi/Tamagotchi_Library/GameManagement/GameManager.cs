@@ -11,6 +11,7 @@ namespace Tamagotchi_Library.GameManagement
     {
         private int timePassing {  get; init; }
         private bool hasExit = false;
+        private SaveManager? currentSave;
 
         public void startGame()
         {
@@ -18,11 +19,22 @@ namespace Tamagotchi_Library.GameManagement
             string nameOfTamagotchi = Console.ReadLine();
 
             IFeline tamagotchi = choosePet(nameOfTamagotchi);
+            currentSave = new SaveManager(tamagotchi);
             while (!hasExit)
             {
                 gameProgress(tamagotchi);
             }
 
+            
+        }
+
+        public void loadGame(string saveFilePath)
+        {
+            IFeline tamagotchi = SaveManager.loadFromJson(saveFilePath);
+            while (!hasExit)
+            {
+                gameProgress(tamagotchi);
+            }
         }
 
         public IFeline choosePet(string nameOfTamagotchi)

@@ -4,7 +4,7 @@ using Tamagotchi_Library.GameManagement;
 
 GameManager Tamagotchi = new GameManager();
 
-Tamagotchi.startGame();
+Tamagotchi.loadGame("mentésTeszt.json");
 
 Console.WriteLine("Virtual pet simulation started!");
 string name = Console.ReadLine();
