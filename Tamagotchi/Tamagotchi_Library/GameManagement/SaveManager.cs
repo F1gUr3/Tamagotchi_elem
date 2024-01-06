@@ -63,6 +63,29 @@ namespace Tamagotchi_Library.GameManagement
             {
                 string json = File.ReadAllText(filePath);
                 Console.WriteLine(json);
+                int startIndex = json.IndexOf("\"type\": \"") + ("\"type\": \"").Length;
+                int endIndex = json.IndexOf("\"", startIndex + 1);
+                string type = json.Substring(startIndex, endIndex - startIndex);
+
+                switch (type)
+                {
+                    case "Tiger":
+                        loadedPet = JsonSerializer.Deserialize<Tiger>(json);
+
+                        break;
+                    case "Panther":
+                        loadedPet = JsonSerializer.Deserialize<Panther>(json);
+
+                        break;
+                    case "Lion":
+                        loadedPet = JsonSerializer.Deserialize<Lion>(json);
+
+                        break;
+                    default:
+                        throw new CorruptSaveException();
+
+                }
+
                 loadedPet = JsonSerializer.Deserialize<Tiger>(json);
                
             }
