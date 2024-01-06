@@ -87,6 +87,7 @@ namespace Tamagotchi_Library.GameManagement
                         animal.Eat();
                         break;
                     case 6:
+                        currentSave.saveToJson("mentésTeszt.json");
                         hasExit = true;
                         break;
                     default:
