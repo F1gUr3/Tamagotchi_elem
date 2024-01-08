@@ -8,5 +8,7 @@ namespace Tamagotchi_Library.GameManagement
 {
     public class Statistics
     {
+
+
     }
 }

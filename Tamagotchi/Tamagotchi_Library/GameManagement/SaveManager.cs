@@ -14,7 +14,7 @@ namespace Tamagotchi_Library.GameManagement
 
         List<string> felineData = new List<string>();
         public string name { get; init; }
-        public int age { get; set; }
+        public float age { get; set; }
         public int hunger { get; set; }
         public int thirst { get; set; }
         public int happiness { get; set; }
@@ -39,6 +39,14 @@ namespace Tamagotchi_Library.GameManagement
 
         }
 
+        public void timePassUpdate()
+        {
+            TimeSpan elapsedTime = DateTime.Now - lastLogOn;
+            int elapsedDays = (int)elapsedTime.TotalDays;
+
+            age = (float)(age + elapsedDays *  0.25);
+
+        }
         public void updateData(IFeline toSave)
         {
             felineData = toSave.getFelineInfo();
@@ -89,7 +97,6 @@ namespace Tamagotchi_Library.GameManagement
 
                 }
 
-                loadedPet = JsonSerializer.Deserialize<Tiger>(json);
                
             }
             catch (Exception ex)

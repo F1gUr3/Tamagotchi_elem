@@ -7,7 +7,7 @@ using Tamagotchi_Library.AnimalManagement;
 public class Tiger : IFeline
 {
     public string Name { get; }
-    private int age;
+    private float age;
     private int hunger;
     private int thirst;
     private int happiness;
