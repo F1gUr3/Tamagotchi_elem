@@ -19,6 +19,8 @@ namespace Tamagotchi_Library.GameManagement
         public int thirst { get; set; }
         public int happiness { get; set; }
         public string type { get; init; }
+        public DateTime lastLogOn { get; set; }
+
         IFeline feline;
 
         [JsonConstructor]
@@ -44,6 +46,7 @@ namespace Tamagotchi_Library.GameManagement
             hunger = int.Parse(felineData[2]);
             thirst = int.Parse(felineData[3]);
             happiness = int.Parse(felineData[4]);
+            lastLogOn = DateTime.Now;
         }
 
         public void saveToJson(string filePath)
