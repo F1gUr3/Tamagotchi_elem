@@ -45,7 +45,9 @@ namespace Tamagotchi_Library.GameManagement
             int elapsedDays = (int)elapsedTime.TotalDays;
 
             age = (float)(age + elapsedDays *  0.25);
-
+            hunger = hunger - (int)elapsedDays * 10 ;
+            thirst = thirst - (int)elapsedDays * 20;
+            happiness = happiness - (int)elapsedDays   * 25 ;
         }
         public void updateData(IFeline toSave)
         {
