@@ -47,7 +47,7 @@ namespace Tamagotchi_Library.GameManagement
         public int TimePassUpdate()
         {
             TimeSpan elapsedTime = (DateTime.Now - lastLogOn);
-            int elapsedHours = (int)elapsedTime.TotalHours;
+            int elapsedHours = (int)elapsedTime.Hours;
             Console.WriteLine(elapsedHours);
             return elapsedHours;
             
