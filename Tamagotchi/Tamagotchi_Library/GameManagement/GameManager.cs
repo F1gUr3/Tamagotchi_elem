@@ -11,7 +11,7 @@ namespace Tamagotchi_Library.GameManagement
     {
         private int timePassing {  get; init; }
         private bool hasExit = false;
-        private SaveManager? currentSave;
+        private SaveManager? saveManager;
 
         public void startGame()
         {
@@ -19,7 +19,7 @@ namespace Tamagotchi_Library.GameManagement
             string nameOfTamagotchi = Console.ReadLine();
 
             IFeline tamagotchi = choosePet(nameOfTamagotchi);
-            currentSave = new SaveManager(tamagotchi);
+            saveManager = new SaveManager(tamagotchi);
             while (!hasExit)
             {
                 gameProgress(tamagotchi);
@@ -30,7 +30,8 @@ namespace Tamagotchi_Library.GameManagement
 
         public void loadGame(string saveFilePath)
         {
-            IFeline tamagotchi = SaveManager.loadFromJson(saveFilePath);
+            saveManager = new SaveManager();
+            IFeline tamagotchi = saveManager.loadFromJson(saveFilePath);
             while (!hasExit)
             {
                 gameProgress(tamagotchi);
@@ -87,7 +88,7 @@ namespace Tamagotchi_Library.GameManagement
                         animal.Eat();
                         break;
                     case 6:
-                        currentSave.saveToJson("mentésTeszt.json");
+                        saveManager.saveToJson("mentésTeszt.json");
                         hasExit = true;
                         break;
                     default:

@@ -4,10 +4,10 @@ using Tamagotchi_Library.GameManagement;
 
 GameManager Tamagotchi = new GameManager();
 
-Tamagotchi.startGame();
-//Tamagotchi.loadGame("mentésTeszt.json");
+//Tamagotchi.startGame();
+Tamagotchi.loadGame("mentésTeszt.json");
 
-Console.WriteLine("Virtual pet simulation started!");
+Console.WriteLine("Virtual pet simulation ended!");
 string name = Console.ReadLine();
 IFeline pet = new Tiger(name);
 

@@ -40,3 +40,16 @@ C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug
 C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\refint\Tamagotchi_Library.dll
 C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.pdb
 C:\Users\PC\source\repos\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\ref\Tamagotchi_Library.dll
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\Tiger.cs
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\IFeline.cs
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.deps.json
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.dll
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.pdb
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.AssemblyInfoInputs.cache
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.AssemblyInfo.cs
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.csproj.CoreCompileInputs.cache
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.dll
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\refint\Tamagotchi_Library.dll
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.pdb
+D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\ref\Tamagotchi_Library.dll

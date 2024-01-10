@@ -38,6 +38,11 @@ namespace Tamagotchi_Library.AnimalManagement
             throw new NotImplementedException();
         }
 
+        public void PassiveProgress(int elapsedDays)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Play()
         {
             throw new NotImplementedException();

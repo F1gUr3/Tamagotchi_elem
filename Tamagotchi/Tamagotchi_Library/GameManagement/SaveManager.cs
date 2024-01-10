@@ -12,7 +12,7 @@ namespace Tamagotchi_Library.GameManagement
     public class SaveManager
     {
 
-        List<string> felineData = new List<string>();
+        private List<string> felineData = new List<string>();
         public string name { get; init; }
         public float age { get; set; }
         public int hunger { get; set; }
@@ -21,7 +21,12 @@ namespace Tamagotchi_Library.GameManagement
         public string type { get; init; }
         public DateTime lastLogOn { get; set; }
 
-        IFeline feline;
+        private IFeline feline;
+
+        public SaveManager()
+        {
+
+        }
 
         [JsonConstructor]
         public SaveManager(IFeline toSave)
@@ -39,15 +44,13 @@ namespace Tamagotchi_Library.GameManagement
 
         }
 
-        public void timePassUpdate()
+        public int TimePassUpdate()
         {
-            TimeSpan elapsedTime = DateTime.Now - lastLogOn;
-            int elapsedDays = (int)elapsedTime.TotalDays;
-
-            age = (float)(age + elapsedDays *  0.25);
-            hunger = hunger - (int)elapsedDays * 10 ;
-            thirst = thirst - (int)elapsedDays * 20;
-            happiness = happiness - (int)elapsedDays   * 25 ;
+            TimeSpan elapsedTime = (DateTime.Now - lastLogOn);
+            int elapsedHours = (int)elapsedTime.TotalHours;
+            Console.WriteLine(elapsedHours);
+            return elapsedHours;
+            
         }
         public void updateData(IFeline toSave)
         {
@@ -68,10 +71,9 @@ namespace Tamagotchi_Library.GameManagement
             File.WriteAllText(filePath, json);
         }
 
-        public static IFeline loadFromJson(string filePath)
+        public IFeline loadFromJson(string filePath)
         {
             IFeline loadedPet = null;
-
             try
             {
                 string json = File.ReadAllText(filePath);
@@ -84,15 +86,15 @@ namespace Tamagotchi_Library.GameManagement
                 {
                     case "Tiger":
                         loadedPet = JsonSerializer.Deserialize<Tiger>(json);
-
+                        loadedPet.PassiveProgress(TimePassUpdate());
                         break;
                     case "Panther":
                         loadedPet = JsonSerializer.Deserialize<Panther>(json);
-
+                        loadedPet.PassiveProgress(TimePassUpdate());
                         break;
                     case "Lion":
                         loadedPet = JsonSerializer.Deserialize<Lion>(json);
-
+                        loadedPet.PassiveProgress(TimePassUpdate());
                         break;
                     default:
                         throw new CorruptSaveException();

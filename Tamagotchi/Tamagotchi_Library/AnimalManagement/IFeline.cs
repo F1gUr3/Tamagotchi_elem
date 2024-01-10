@@ -11,6 +11,7 @@ namespace Tamagotchi_Library.AnimalManagement
 
         List<String> getFelineInfo();
         void Progress();
+        void PassiveProgress(int elapsedDays);
         void Eat();
         void Drink();
         void Hunt();
