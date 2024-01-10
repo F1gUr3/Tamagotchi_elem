@@ -13,7 +13,26 @@ namespace Tamagotchi_Library.GameManagement
         private bool hasExit = false;
         private SaveManager? saveManager;
 
+
         public void startGame()
+        {
+            Console.WriteLine("Welcome to the tamagotchi simulator: Start new Game(1) or load game(2)");
+            string userInput = Console.ReadLine();
+            if (userInput == "1")
+            {
+                startGame();
+            }
+            else if(userInput == "2")
+            {
+                loadGame("mentésTeszt.json");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect input!");
+                startGame();
+            }
+        }
+        public void newGame()
         {
             Console.WriteLine("How is your pet called? ");
             string nameOfTamagotchi = Console.ReadLine();
