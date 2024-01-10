@@ -9,20 +9,19 @@ namespace Tamagotchi_Library.GameManagement
 {
     public class GameManager
     {
-        private int timePassing {  get; init; }
         private bool hasExit = false;
         private SaveManager? saveManager;
 
 
         public void startGame()
         {
-            Console.WriteLine("Welcome to the tamagotchi simulator: Start new Game(1) or load game(2)");
-            string userInput = Console.ReadLine();
-            if (userInput == "1")
+            Console.WriteLine("Welcome to the tamagotchi simulator: Start new Game (1) or load game (2)");
+            int userInput = int.Parse(Console.ReadLine());
+            if (userInput == 1)
             {
-                startGame();
+                newGame();
             }
-            else if(userInput == "2")
+            else if (userInput == 2)
             {
                 loadGame("mentésTeszt.json");
             }
