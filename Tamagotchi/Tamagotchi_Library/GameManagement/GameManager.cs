@@ -86,6 +86,7 @@ namespace Tamagotchi_Library.GameManagement
         public void gameProgress(IFeline animal)
         {
             animal.Progress();
+            Console.WriteLine("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) Save and exit(6)");
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
                 switch (choice)

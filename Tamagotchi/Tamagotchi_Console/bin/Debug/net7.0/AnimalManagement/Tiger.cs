@@ -90,7 +90,7 @@ public class Tiger : IFeline
     {
         if (!isResting)
         {
-            thirst -= 5;
+            thirst += 5;
             Console.WriteLine("Animal is drinking.");
             CheckNeeds();
         }
