@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Tamagotchi_Library.GameManagement
 {
-    public class Statistics
+    public static class Statistics
     {
+        private static int numberOfPetsRaised = 0;
+
+        public static void PetsRaisedIncrement()
+        {
+            numberOfPetsRaised++;
+        }
 
 
     }
