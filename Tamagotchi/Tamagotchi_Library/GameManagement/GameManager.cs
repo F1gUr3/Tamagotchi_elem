@@ -23,7 +23,7 @@ namespace Tamagotchi_Library.GameManagement
             }
             else if (userInput == 2)
             {
-                loadGame("mentésTeszt.json");
+                loadGame();
             }
             else
             {
@@ -46,10 +46,10 @@ namespace Tamagotchi_Library.GameManagement
             
         }
 
-        public void loadGame(string saveFilePath)
+        public void loadGame()
         {
             saveManager = new SaveManager();
-            IFeline tamagotchi = saveManager.loadFromJson(saveFilePath);
+            IFeline tamagotchi = saveManager.loadPrompt();
             while (!hasExit)
             {
                 gameProgress(tamagotchi);
@@ -107,7 +107,11 @@ namespace Tamagotchi_Library.GameManagement
                         animal.Eat();
                         break;
                     case 6:
-                        saveManager.saveToJson("mentésTeszt.json");
+                        Console.WriteLine("Save file name: ");
+
+                        string fileName = Console.ReadLine() + ".json";
+
+                        saveManager.savePrompt(fileName);
                         hasExit = true;
                         break;
                     default:
