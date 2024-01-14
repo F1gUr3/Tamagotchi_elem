@@ -7,7 +7,7 @@ using Tamagotchi_Library.AnimalManagement;
 public class Tiger : IFeline
 {
     public string Name { get; }
-    private int age;
+    private float age;
     private int hunger;
     private int thirst;
     private int happiness;
@@ -44,7 +44,13 @@ public class Tiger : IFeline
 
 
     }
-
+    public void PassiveProgress(int elapsedHours)
+    {
+        age = (float)(age + elapsedHours * 0.25);
+        hunger = hunger - (int)elapsedHours * 2;
+        thirst = thirst - (int)elapsedHours * 4;
+        happiness = happiness - (int)elapsedHours * 4;
+    }
     public void Progress()
     {
         age++;
@@ -59,6 +65,8 @@ public class Tiger : IFeline
             Console.WriteLine("The animal is sick and needs rest.");
             isSick = true;
         }
+
+       
 
         if (isResting)
         {
@@ -79,7 +87,7 @@ public class Tiger : IFeline
     {
         if (!isResting)
         {
-            thirst -= 5;
+            thirst += 5;
             Console.WriteLine("Animal is drinking.");
             CheckNeeds();
         }

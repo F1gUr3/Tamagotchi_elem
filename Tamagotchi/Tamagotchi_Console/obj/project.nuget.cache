@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "6jvKHIb6DU801ucIMsRuzmx7P2z/Po2ZvCQ4TCzTnYxb5n9TYJzYouE54FlZsPPgCg4F+g8SmwqTpIZ3kxH4Yw==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Console\\Tamagotchi_Console.csproj",
+=======
+  "dgSpecHash": "tUROpyBMdoYAU/NOlZNaOcQwxk6B4rPq96eSNaFyf9f5qm3+CysIAy23WbS0zxecaQWjUCh7/F08ykJtr6pzaw==",
+  "success": true,
+  "projectFilePath": "D:\\Lukácsi Adrián\\Projekt\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Console\\Tamagotchi_Console.csproj",
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
   "expectedPackageFiles": [],
   "logs": []
 }

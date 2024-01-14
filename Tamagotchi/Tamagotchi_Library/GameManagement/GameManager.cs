@@ -9,17 +9,35 @@ namespace Tamagotchi_Library.GameManagement
 {
     public class GameManager
     {
-        private int timePassing {  get; init; }
         private bool hasExit = false;
-        private SaveManager? currentSave;
+        private SaveManager? saveManager;
+
 
         public void startGame()
+        {
+            Console.WriteLine("Welcome to the tamagotchi simulator: Start new Game (1) or load game (2)");
+            int userInput = int.Parse(Console.ReadLine());
+            if (userInput == 1)
+            {
+                newGame();
+            }
+            else if (userInput == 2)
+            {
+                loadGame("mentésTeszt.json");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect input!");
+                startGame();
+            }
+        }
+        public void newGame()
         {
             Console.WriteLine("How is your pet called? ");
             string nameOfTamagotchi = Console.ReadLine();
 
             IFeline tamagotchi = choosePet(nameOfTamagotchi);
-            currentSave = new SaveManager(tamagotchi);
+            saveManager = new SaveManager(tamagotchi);
             while (!hasExit)
             {
                 gameProgress(tamagotchi);
@@ -30,7 +48,8 @@ namespace Tamagotchi_Library.GameManagement
 
         public void loadGame(string saveFilePath)
         {
-            IFeline tamagotchi = SaveManager.loadFromJson(saveFilePath);
+            saveManager = new SaveManager();
+            IFeline tamagotchi = saveManager.loadFromJson(saveFilePath);
             while (!hasExit)
             {
                 gameProgress(tamagotchi);
@@ -67,6 +86,7 @@ namespace Tamagotchi_Library.GameManagement
         public void gameProgress(IFeline animal)
         {
             animal.Progress();
+            Console.WriteLine("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) Save and exit(6)");
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
                 switch (choice)
@@ -87,7 +107,7 @@ namespace Tamagotchi_Library.GameManagement
                         animal.Eat();
                         break;
                     case 6:
-                        currentSave.saveToJson("mentésTeszt.json");
+                        saveManager.saveToJson("mentésTeszt.json");
                         hasExit = true;
                         break;
                     default:

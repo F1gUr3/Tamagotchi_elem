@@ -2320,23 +2320,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\PC\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Suli\\.nuget\\packages\\": {},
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\PC\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
       "projectName": "Tamagotchi_Test",
       "projectPath": "C:\\Users\\PC\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\PC\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\obj\\",
+=======
+      "projectUniqueName": "D:\\Lukácsi Adrián\\Projekt\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
+      "projectName": "Tamagotchi_Test",
+      "projectPath": "D:\\Lukácsi Adrián\\Projekt\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
+      "packagesPath": "C:\\Users\\Suli\\.nuget\\packages\\",
+      "outputPath": "D:\\Lukácsi Adrián\\Projekt\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\obj\\",
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Suli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2352,8 +2368,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\PC\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {
               "projectPath": "C:\\Users\\PC\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj"
+=======
+            "D:\\Lukácsi Adrián\\Projekt\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj": {
+              "projectPath": "D:\\Lukácsi Adrián\\Projekt\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj"
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
             }
           }
         }
@@ -2401,7 +2422,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
       }
     }
   }

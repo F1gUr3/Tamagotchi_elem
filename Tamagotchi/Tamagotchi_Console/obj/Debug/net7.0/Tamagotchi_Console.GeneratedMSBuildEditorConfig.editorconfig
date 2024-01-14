@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tamagotchi_Console
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\PC\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+=======
+build_property.ProjectDir = D:\Lukácsi Adrián\Projekt\Tamagotchi_elem\Tamagotchi\Tamagotchi_Console\
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe

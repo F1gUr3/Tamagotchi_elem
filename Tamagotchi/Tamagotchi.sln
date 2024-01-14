@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tamagotchi_Library", "Tamag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tamagotchi_Test", "Tamagotchi_Test\Tamagotchi_Test.csproj", "{5AFAC869-BCD7-4873-87A8-D5056375EE50}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTamagotchi", "WPFTamagotchi\WPFTamagotchi.csproj", "{F0D7A004-970C-446A-BF8E-5316BDA238D7}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tamagotchi_WPF", "Tamagotchi_WPF\Tamagotchi_WPF.csproj", "{1F911B6A-967D-475B-867D-A3C368F67F2A}"
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +33,17 @@ Global
 		{5AFAC869-BCD7-4873-87A8-D5056375EE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AFAC869-BCD7-4873-87A8-D5056375EE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AFAC869-BCD7-4873-87A8-D5056375EE50}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{F0D7A004-970C-446A-BF8E-5316BDA238D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F0D7A004-970C-446A-BF8E-5316BDA238D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0D7A004-970C-446A-BF8E-5316BDA238D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0D7A004-970C-446A-BF8E-5316BDA238D7}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{1F911B6A-967D-475B-867D-A3C368F67F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F911B6A-967D-475B-867D-A3C368F67F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F911B6A-967D-475B-867D-A3C368F67F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F911B6A-967D-475B-867D-A3C368F67F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
