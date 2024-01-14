@@ -69,49 +69,12 @@ public class Panther : IFeline
 
         if (isHunting)
         {
-<<<<<<< HEAD
             Console.WriteLine("Animal is still hunting.");
-            Thread.Sleep(1000); // Sleep for 5 seconds
+            Thread.Sleep(1000);
             isHunting = false;
-=======
-            throw new NotImplementedException();
         }
 
-        public List<string> getFelineInfo()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Heal()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Hunt()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PassiveProgress(int elapsedDays)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Play()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Progress()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Wash()
-        {
-            throw new NotImplementedException();
->>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
-        }
+        
     }
 
     public void Drink()
@@ -231,6 +194,11 @@ public class Panther : IFeline
         Console.WriteLine("Animal is eating.");
         hunger += 20;
         CheckNeeds();
+    }
+
+    public void PassiveProgress(int elapsedDays)
+    {
+        throw new NotImplementedException();
     }
 }
 

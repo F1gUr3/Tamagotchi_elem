@@ -3,15 +3,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Tamagotchi Game" Height="450" Width="800">
     <StackPanel>
-        <Label x:Name="PetInfo" Content="Pet Info" FontSize="16"/>
-        <Button x:Name="FeedButton" Content="Feed" Margin="5" Click="FeedButton_Click"/>
-        <Button x:Name="DrinkButton" Content="Drink" Margin="5" Click="DrinkButton_Click"/>
-        <Button x:Name="PlayButton" Content="Play" Margin="5" Click="PlayButton_Click"/>
-        <Button x:Name="HuntButton" Content="Hunt" Margin="5" Click="HuntButton_Click"/>
-        <Button x:Name="WashButton" Content="Wash" Margin="5" Click="WashButton_Click"/>
-        <Button x:Name="HealButton" Content="Heal" Margin="5" Click="HealButton_Click"/>
-        <Button x:Name="ProgressButton" Content="Get Older" Margin="5" Click="ProgressButton_Click"/>
-
-        <!-- ... other buttons for different actions ... -->
+        <StackPanel x:Name="PetSelectionPanel">
+            <Button Content="Tiger" Margin="5" Click="TigerButton_Click"/>
+            <Button Content="Panther" Margin="5" Click="PantherButton_Click"/>
+            <Button Content="Lion" Margin="5" Click="LionButton_Click"/>
+        </StackPanel>
     </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="35*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Állat képének megjelenítése -->
+        <Image x:Name="PetImage" Grid.Column="0" Stretch="UniformToFill" />
+
+        <!-- Állatfajta kiválasztása és vezérlők -->
+        <StackPanel Grid.Column="1">
+            <StackPanel x:Name="PetControlsPanel" Visibility="Collapsed">
+                <Label x:Name="PetInfo" Content="Pet Info" FontSize="16"/>
+                <Button x:Name="FeedButton" Content="Feed" Margin="5" Click="FeedButton_Click"/>
+                <Button x:Name="DrinkButton" Content="Drink" Margin="5" Click="DrinkButton_Click"/>
+                <Button x:Name="PlayButton" Content="Play" Margin="5" Click="PlayButton_Click"/>
+                <Button x:Name="HuntButton" Content="Hunt" Margin="5" Click="HuntButton_Click"/>
+                <Button x:Name="WashButton" Content="Wash" Margin="5" Click="WashButton_Click"/>
+                <Button x:Name="HealButton" Content="Heal" Margin="5" Click="HealButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </Window>

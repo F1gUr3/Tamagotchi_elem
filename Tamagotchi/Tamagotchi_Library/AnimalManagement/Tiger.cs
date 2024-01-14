@@ -6,13 +6,8 @@ using Tamagotchi_Library.AnimalManagement;
 
 public class Tiger : IFeline
 {
-<<<<<<< HEAD
-    public string Name { get; private set; }
-    private int age;
-=======
     public string Name { get; }
     private float age;
->>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
     private int hunger;
     private int thirst;
     private int happiness;
@@ -93,13 +88,9 @@ public class Tiger : IFeline
     {
         if (!isResting)
         {
-<<<<<<< HEAD
             thirst = Math.Min(thirst + 5, MaxValue);
             happiness = Math.Min(happiness + 5, MaxValue);
-=======
-            thirst += 5;
             Console.WriteLine("Animal is drinking.");
->>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
             CheckNeeds();
         }
     }

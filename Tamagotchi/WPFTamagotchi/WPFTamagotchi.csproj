@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="panther.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tamagotchi_Library\Tamagotchi_Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="panther.jpg" />
   </ItemGroup>
 
 </Project>

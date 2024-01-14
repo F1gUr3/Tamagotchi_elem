@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "pIBFN2wdRZAwKJSV8FqE7iccgcEwEVnODGiBgV8JLLqgeGDVTdtOdDMbCCN2P6uU/5JXI4t1BVwEpD7mAWUofg==",
+  "dgSpecHash": "eVlTHiLSZks2cfXDeo8j1HiGpeCiVHgnw2vHiFgJe6v7Wfs0Z9qPHUjROFZ9hoAJX5jnc+g5AAidLXFfP+rsXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj",
-=======
-  "dgSpecHash": "Ihuas/0W/atkPVesbgaCx6Lt3cZ+gfStiyAynvH51kJlOitjYWfq0IOI2Qpkyoz09cTwflnpYHQ63sTqVDE77g==",
-  "success": true,
-  "projectFilePath": "D:\\Lukácsi Adrián\\Projekt\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj",
->>>>>>> 0ceebd9679f1929bba4aa954d65c2b973a9961fe
+  "projectFilePath": "C:\\Users\\PC\\source\\repos\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\Tamagotchi_Library.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\PC\\source\\repos\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Library\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
