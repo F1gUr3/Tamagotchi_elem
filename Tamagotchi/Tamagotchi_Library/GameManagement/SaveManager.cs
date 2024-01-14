@@ -93,11 +93,7 @@ namespace Tamagotchi_Library.GameManagement
             {
                 Console.WriteLine($"Error loading pet from JSON: {ex.Message}");
             }
-
-
-
             return loadedPet;
-
 
         }
 

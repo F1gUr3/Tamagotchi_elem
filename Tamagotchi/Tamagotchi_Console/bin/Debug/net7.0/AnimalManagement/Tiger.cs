@@ -53,13 +53,11 @@ public class Tiger : IFeline
         {
             Console.WriteLine("The animal is sick and needs rest.");
             isSick = true;
-            Heal();
         }
         else if (age > 10 && age <= 20 && IsRandomlySick())
         {
             Console.WriteLine("The animal is sick and needs rest.");
             isSick = true;
-            Heal();
         }
 
         if (isResting)
@@ -72,9 +70,8 @@ public class Tiger : IFeline
         if (isHunting)
         {
             Console.WriteLine("Animal is still hunting.");
-            Thread.Sleep(5000); // Sleep for 5 seconds
+            Thread.Sleep(1000); // Sleep for 5 seconds
             isHunting = false;
-            Wash(); // Bath after hunting
         }
     }
 
@@ -173,7 +170,7 @@ public class Tiger : IFeline
         else if (thirst <= 40)
         {
             Console.WriteLine("Animal is thirsty. It's time to drink!");
-            Drink();
+
         }
     }
 

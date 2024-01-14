@@ -6,7 +6,7 @@ using Tamagotchi_Library.AnimalManagement;
 
 public class Tiger : IFeline
 {
-    public string Name { get; }
+    public string Name { get; private set; }
     private int age;
     private int hunger;
     private int thirst;
@@ -15,13 +15,15 @@ public class Tiger : IFeline
     private bool isResting;
     private bool isHunting;
 
+    private const int MaxValue = 100;
+
     public Tiger(string name)
     {
         Name = name;
         age = 0;
-        hunger = 100;
-        thirst = 100;
-        happiness = 100;
+        hunger = MaxValue;
+        thirst = MaxValue;
+        happiness = MaxValue;
         isSick = false;
         isResting = false;
         isHunting = false;
@@ -53,13 +55,11 @@ public class Tiger : IFeline
         {
             Console.WriteLine("The animal is sick and needs rest.");
             isSick = true;
-            Heal();
         }
         else if (age > 10 && age <= 20 && IsRandomlySick())
         {
             Console.WriteLine("The animal is sick and needs rest.");
             isSick = true;
-            Heal();
         }
 
         if (isResting)
@@ -72,9 +72,7 @@ public class Tiger : IFeline
         if (isHunting)
         {
             Console.WriteLine("Animal is still hunting.");
-            Thread.Sleep(5000); // Sleep for 5 seconds
             isHunting = false;
-            Wash(); // Bath after hunting
         }
     }
 
@@ -82,8 +80,8 @@ public class Tiger : IFeline
     {
         if (!isResting)
         {
-            thirst -= 5;
-            Console.WriteLine("Animal is drinking.");
+            thirst = Math.Min(thirst + 5, MaxValue);
+            happiness = Math.Min(happiness + 5, MaxValue);
             CheckNeeds();
         }
     }
@@ -102,7 +100,7 @@ public class Tiger : IFeline
             {
                 Console.WriteLine("Animal is hunting.");
                 isHunting = true;
-                happiness += 10;
+                happiness = Math.Min(happiness + 5, MaxValue);
                 thirst -= 10;
                 hunger -= 15;
                 CheckNeeds();
@@ -113,8 +111,7 @@ public class Tiger : IFeline
     public void Wash()
     {
         Console.WriteLine("Animal is washing.");
-        happiness += 5;
-        Thread.Sleep(5000); // Sleep for 5 seconds
+        happiness = Math.Min(happiness + 5, MaxValue);
         CheckNeeds();
     }
 
@@ -124,8 +121,7 @@ public class Tiger : IFeline
         {
             if (age < 10)
             {
-                Console.WriteLine("Animal is playing.");
-                happiness += 15;
+                happiness = Math.Min(happiness + 15, MaxValue);
                 thirst -= 5;
                 hunger -= 5;
                 CheckNeeds();
@@ -141,15 +137,16 @@ public class Tiger : IFeline
         }
     }
 
-    public void Heal()
+    public async void Heal()
     {
-        Console.WriteLine("Animal is resting and healing.");
-        happiness += 10;
+        happiness = Math.Min(happiness + 10, MaxValue);
         isResting = true;
         isSick = false;
-        Thread.Sleep(10000); // Sleep for 10 seconds
-        CheckNeeds();
+        await Task.Delay(1000);
+        isResting = false;
+
     }
+
 
     public void Die()
     {
@@ -173,17 +170,17 @@ public class Tiger : IFeline
         else if (thirst <= 40)
         {
             Console.WriteLine("Animal is thirsty. It's time to drink!");
-            Drink();
+
         }
     }
 
     private void Eat()
     {
-        Console.WriteLine("Animal is eating.");
-        hunger += 20;
+        happiness = Math.Min(happiness + 5, MaxValue);
+        hunger = Math.Min(hunger + 20, MaxValue);
         CheckNeeds();
     }
-
+    
     private bool IsRandomlySick()
     {
 
@@ -192,9 +189,7 @@ public class Tiger : IFeline
 
     void IFeline.Eat()
     {
-        Console.WriteLine("Animal is eating.");
-        hunger += 20;
-        CheckNeeds();
+        Eat();
     }
 }
 
