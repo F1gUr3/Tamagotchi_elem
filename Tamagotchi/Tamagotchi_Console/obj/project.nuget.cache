@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AqG6okES7axH9DA7uY2ensoUvlQ0y48Lxe1Oha3EGGF0MAFNwOIHc2x1CY56cRKbZQ4LxC+w4dJtflOiQDWO0g==",
+  "dgSpecHash": "8byejmlOooF9pb3YZbz3Vg2/d62yu9HTaSSxUzCB7Wz4yDZ1BRQX/bm0mE26poFZ1oePReZz2NQFtaVqV4Qaww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\source\\repos\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Console\\Tamagotchi_Console.csproj",
+  "projectFilePath": "C:\\Users\\Adrián\\Desktop\\IT\\PROJEKT\\FÁNK\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Console\\Tamagotchi_Console.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\PC\\source\\repos\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Console\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

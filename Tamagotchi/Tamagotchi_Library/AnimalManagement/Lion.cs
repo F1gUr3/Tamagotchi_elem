@@ -7,7 +7,7 @@ using Tamagotchi_Library.AnimalManagement;
 public class Lion : IFeline
 {
     public string Name { get; }
-    private int age;
+    private float age;
     private int hunger;
     private int thirst;
     private int happiness;
@@ -201,9 +201,12 @@ public class Lion : IFeline
         CheckNeeds();
     }
 
-    public void PassiveProgress(int elapsedDays)
+    public void PassiveProgress(int elapsedHours)
     {
-        throw new NotImplementedException();
+        age = (float)(age + elapsedHours * 0.25);
+        hunger = hunger - (int)elapsedHours * 2;
+        thirst = thirst - (int)elapsedHours * 4;
+        happiness = happiness - (int)elapsedHours * 4;
     }
 }
 
