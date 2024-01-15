@@ -12,63 +12,60 @@ namespace Tamagotchi_Library.GameManagement
         private bool hasExit = false;
         private SaveManager? saveManager;
 
-        private void PrintCentered(string text)
-        {
-            int width = Console.WindowWidth;
-            int leftPadding = (width - text.Length) / 2;
-            Console.SetCursorPosition(leftPadding, Console.CursorTop);
-            Console.WriteLine(text);
-        }
+        
 
         public void startGame()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            PrintCentered("Welcome to the feline pet simulator \n");
+            ConsoleHandler.PrintCentered("Welcome to the feline pet simulator \n");
 
             Console.ForegroundColor = ConsoleColor.Green;
 
-            PrintCentered(": Start new Game (1) \n");
+            ConsoleHandler.PrintCentered(": Start new Game (1) \n");
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            PrintCentered(": Load Game (2)");
+            ConsoleHandler.PrintCentered(": Load Game (2)");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            PrintCentered(",\\/~~~\\_                            _/~~~~\\");
-            PrintCentered("|  ---, `\\_    ___,-------~~\\__  /~' ,,''  |");
-            PrintCentered("| `~`, ',,\\`-~~--_____    ---  - /, ,--/ '/'");
-            PrintCentered("`\\_|\\ _\\`    ______,---~~~\\  ,_   '\\_/' /'");
-            PrintCentered("  \\,_|   , '~,'~/~   /~\\ ,_  `\\_ \\_  \\_\\'");
-            PrintCentered("    ,/   /' ,/' _,-'~~  `\\  ~~\\_ ,_  `\\  `\\");
-            PrintCentered("  /@@ _/  /' ./',-                 \\       `@,");
-            PrintCentered(" @@ '   |  ___/  /'  /  \\  \\ '__ _`~|, `, @@");
-            PrintCentered("/@@ /  | | ',___  |  |    `  | ,,---,  |  | `@@,");
-            PrintCentered("@@@ \\  | | \\ \\O_\\ |        / / O_/' | \\  \\  @@@");
-            PrintCentered("@@@ |  | `| '   ~ / ,          ~     /  |    @@@");
-            PrintCentered("`@@ |   \\ `\\     ` |         | |  _/'  /'  | @@'");
-            PrintCentered(" @@ |    ~\\ /--'~  |       , |  \\__   |    | |@@");
-            PrintCentered(" @@, \\     | ,,|   |       ,,|   | `\\     /',@@");
-            PrintCentered("`@@, ~\\   \\ '     ` |       / /    `' '   / ,@@");
-            PrintCentered(" @@@,    \\    ~~\\ `\\/~---'~/' _ /'~~~~~~~~--,");
-            PrintCentered("  `@@@_,---::::::=  `-_,| ,~  _=:::::''''    `");
-            PrintCentered("  ,/~~_---'_,-___     _-__  ' -~~~\\_```---");
-            PrintCentered("    ~`   ~~_/'// _,--~\\_/ '~--, |\\_");
-            PrintCentered("         /' /'| `@@@@@,,,,,@@@@  | \\   -Chevalier-");
-            PrintCentered("              `     `@@@@@@'");
+            ConsoleHandler.PrintCentered(",\\/~~~\\_                            _/~~~~\\");
+            ConsoleHandler.PrintCentered("|  ---, `\\_    ___,-------~~\\__  /~' ,,''  |");
+            ConsoleHandler.PrintCentered("| `~`, ',,\\`-~~--_____    ---  - /, ,--/ '/'");
+            ConsoleHandler.PrintCentered("`\\_|\\ _\\`    ______,---~~~\\  ,_   '\\_/' /'");
+            ConsoleHandler.PrintCentered("  \\,_|   , '~,'~/~   /~\\ ,_  `\\_ \\_  \\_\\'");
+            ConsoleHandler.PrintCentered("    ,/   /' ,/' _,-'~~  `\\  ~~\\_ ,_  `\\  `\\");
+            ConsoleHandler.PrintCentered("  /@@ _/  /' ./',-                 \\       `@,");
+            ConsoleHandler.PrintCentered(" @@ '   |  ___/  /'  /  \\  \\ '__ _`~|, `, @@");
+            ConsoleHandler.PrintCentered("/@@ /  | | ',___  |  |    `  | ,,---,  |  | `@@,");
+            ConsoleHandler.PrintCentered("@@@ \\  | | \\ \\O_\\ |        / / O_/' | \\  \\  @@@");
+            ConsoleHandler.PrintCentered("@@@ |  | `| '   ~ / ,          ~     /  |    @@@");
+            ConsoleHandler.PrintCentered("`@@ |   \\ `\\     ` |         | |  _/'  /'  | @@'");
+            ConsoleHandler.PrintCentered(" @@ |    ~\\ /--'~  |       , |  \\__   |    | |@@");
+            ConsoleHandler.PrintCentered(" @@, \\     | ,,|   |       ,,|   | `\\     /',@@");
+            ConsoleHandler.PrintCentered("`@@, ~\\   \\ '     ` |       / /    `' '   / ,@@");
+            ConsoleHandler.PrintCentered(" @@@,    \\    ~~\\ `\\/~---'~/' _ /'~~~~~~~~--,");
+            ConsoleHandler.PrintCentered("  `@@@_,---::::::=  `-_,| ,~  _=:::::''''    `");
+            ConsoleHandler.PrintCentered("  ,/~~_---'_,-___     _-__  ' -~~~\\_```---");
+            ConsoleHandler.PrintCentered("    ~`   ~~_/'// _,--~\\_/ '~--, |\\_");
+            ConsoleHandler.PrintCentered("         /' /'| `@@@@@,,,,,@@@@  | \\   -Chevalier-");
+            ConsoleHandler.PrintCentered("              `     `@@@@@@'");
 
             Console.ForegroundColor = ConsoleColor.White;
         int userInput = int.Parse(Console.ReadLine());
             if (userInput == 1)
             {
+                Console.Clear();
                 newGame();
             }
             else if (userInput == 2)
             {
+                Console.Clear();
                 loadGame();
             }
             else
             {
-                Console.WriteLine("Incorrect input!");
+                Console.Clear();
+                ConsoleHandler.PrintCentered("Incorrect input!");
                 startGame();
             }
 
@@ -76,7 +73,9 @@ namespace Tamagotchi_Library.GameManagement
         }
         public void newGame()
         {
-            Console.WriteLine("How is your pet called? ");
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("what is your pet's name? ");
             string nameOfTamagotchi = Console.ReadLine();
 
             IFeline tamagotchi = choosePet(nameOfTamagotchi);
@@ -102,7 +101,7 @@ namespace Tamagotchi_Library.GameManagement
 
         public IFeline choosePet(string nameOfTamagotchi)
         {
-            Console.WriteLine("Choose the type of pet: (1) Tiger, (2), Panther, (3) Lion");
+            ConsoleHandler.PrintCentered("Choose the type of pet: (1) Tiger, (2), Panther, (3) Lion");
             string petOfChoice = Console.ReadLine();
             IFeline tamagotchi = null;
 
@@ -118,7 +117,7 @@ namespace Tamagotchi_Library.GameManagement
                     tamagotchi = new Lion(nameOfTamagotchi);
                     break;
                 default:
-                    Console.WriteLine("Bad input! Try a number between 1-3!");
+                    ConsoleHandler.PrintCentered("Bad input! Try a number between 1-3!");
                     choosePet(nameOfTamagotchi);
                     break;
 
@@ -129,7 +128,6 @@ namespace Tamagotchi_Library.GameManagement
         }
         public void gameProgress(IFeline animal)
         {
-
             animal.Progress();
 
             //ASCII SOURCE: https://ascii.co.uk/art/tiger
@@ -138,114 +136,167 @@ namespace Tamagotchi_Library.GameManagement
                 switch (choice)
                 {
                     case 1:
-                        Console.WriteLine("                         __,,,,_");
-                        Console.WriteLine("          _ __..-;''`--/'/ /.',-`-.");
-                        Console.WriteLine("      (`/' ` |  \\ \\ \\\\ / / / / .-'/`,_");
-                        Console.WriteLine("     /'`\\ \\   |  \\ | \\| // // / -.,/_,'-,");
-                        Console.WriteLine("    /<7' ;  \\ \\  | ; ||/ /| | \\/    |`-/,/-.,_,/'");
-                        Console.WriteLine("   /  _.-, `,-\\,__|  _-| / \\ \\/|_/  |    '-/.;.'\\'");
-                        Console.WriteLine("   `-`  ( / ;      / __/ \\__ `/ |__/ |");
-                        Console.WriteLine("        `-'      |  -| =|\\_  \\  |-' |");
-                        Console.WriteLine("              __/   /_..-' `  ),'  //");
-                        Console.WriteLine("             ((__.-'((___..-'' \\__.'");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        ConsoleHandler.PrintCentered("                         __,,,,_");
+                        ConsoleHandler.PrintCentered("          _ __..-;''`--/'/ /.',-`-.");
+                        ConsoleHandler.PrintCentered("      (`/' ` |  \\ \\ \\\\ / / / / .-'/`,_");
+                        ConsoleHandler.PrintCentered("     /'`\\ \\   |  \\ | \\| // // / -.,/_,'-,");
+                        ConsoleHandler.PrintCentered("    /<7' ;  \\ \\  | ; ||/ /| | \\/    |`-/,/-.,_,/'");
+                        ConsoleHandler.PrintCentered("   /  _.-, `,-\\,__|  _-| / \\ \\/|_/  |    '-/.;.'\\'");
+                        ConsoleHandler.PrintCentered("   `-`  ( / ;      / __/ \\__ `/ |__/ |");
+                        ConsoleHandler.PrintCentered("        `-'      |  -| =|\\_  \\  |-' |");
+                        ConsoleHandler.PrintCentered("              __/   /_..-' `  ),'  //");
+                        ConsoleHandler.PrintCentered("             ((__.-'((___..-'' \\__.'");
+                        Console.ForegroundColor = ConsoleColor.White;
 
                         animal.Drink();
                         break;
                     case 2:
-                        Console.WriteLine(" _");
-                        Console.WriteLine("  ( \\                ..-----..__");
-                        Console.WriteLine("   \\.'.        _.--'`  [   '  ' ```'-._");
-                        Console.WriteLine("    `. `'-..-'' `    '  ' '   .  ;   ; `-'''-.,__/|/_");
-                        Console.WriteLine("      `'-.;..-''`|'  `.  '.    ;     '  `    '   `'  `,");
-                        Console.WriteLine("                 \\ '   .    ' .     '   ;   .`   . ' 7 \\");
-                        Console.WriteLine("                  '.' . '- . \\    .`   .`  .   .\\     `Y");
-                        Console.WriteLine("                    '-.' .   ].  '   ,    '    /'`\"\"';:'");
-                        Console.WriteLine("                      /Y   '.] '-._ /    ' _.-'");
-                        Console.WriteLine("                      \\'\\_   ; (`'.'.'  .\"/");
-                        Console.WriteLine("                       ' )` /  `.'   .-'.");
-                        Console.WriteLine("                        '\\  \\).'  .-'--\"");
-                        Console.WriteLine("                          `. `,_'`");
-                        Console.WriteLine("                            `.__)     ");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        ConsoleHandler.PrintCentered(" _");
+                        ConsoleHandler.PrintCentered("  ( \\                ..-----..__");
+                        ConsoleHandler.PrintCentered("   \\.'.        _.--'`  [   '  ' ```'-._");
+                        ConsoleHandler.PrintCentered("    `. `'-..-'' `    '  ' '   .  ;   ; `-'''-.,__/|/_");
+                        ConsoleHandler.PrintCentered("      `'-.;..-''`|'  `.  '.    ;     '  `    '   `'  `,");
+                        ConsoleHandler.PrintCentered("                 \\ '   .    ' .     '   ;   .`   . ' 7 \\");
+                        ConsoleHandler.PrintCentered("                  '.' . '- . \\    .`   .`  .   .\\     `Y");
+                        ConsoleHandler.PrintCentered("                    '-.' .   ].  '   ,    '    /'`\"\"';:'");
+                        ConsoleHandler.PrintCentered("                      /Y   '.] '-._ /    ' _.-'");
+                        ConsoleHandler.PrintCentered("                      \\'\\_   ; (`'.'.'  .\"/");
+                        ConsoleHandler.PrintCentered("                       ' )` /  `.'   .-'.");
+                        ConsoleHandler.PrintCentered("                        '\\  \\).'  .-'--\"");
+                        ConsoleHandler.PrintCentered("                          `. `,_'`");
+                        ConsoleHandler.PrintCentered("                            `.__)");
+                        Console.ForegroundColor = ConsoleColor.White;
+
                         animal.Hunt();
                         break;
                     case 3:
-                        Console.WriteLine("                           _");
-                        Console.WriteLine("        __       __       ' `.");
-                        Console.WriteLine("      .'  `.  .-'\\`-.  ./   |");
-                        Console.WriteLine("      |     \\-'-'_\\`-`_/    |");
-                        Console.WriteLine("      |      \\--'-\\-._-.'/  )");
-                        Console.WriteLine("      \\  \\ .'.'--'|\\`--._`.-'.");
-                        Console.WriteLine("       )`' .''' .'.-L-.`-.\\ '.");
-                        Console.WriteLine("      // _'/J '- ///|\\\\\\|-.``.`'.");
-                        Console.WriteLine("    .'/'/ .'.-`( | '|` ..-.'( L- L");
-                        Console.WriteLine("   // |J J|]`(\"\\\")\\ J  (\".'`J||- |");
-                        Console.WriteLine("  / | |) || Y.`.`\\.' -. L'-J|||- -");
-                        Console.WriteLine(" /. ' |`.J|J\\  ))J'/\"-. \\\\`'/'/-  \\");
-                        Console.WriteLine("J- -  \\  L\\\\`.-' || .' \\ \\\\`'J J  |");
-                        Console.WriteLine("|- '_-'. (= `.//.-.__ \" _  L-/.-. |");
-                        Console.WriteLine("|-      )_\\\\`|...(\\`-.\".''.)/ -.  )---");
-                        Console.WriteLine("|- ''    )  `\\.::::.`.\\|/.:.'`-  ``--._");
-                        Console.WriteLine("J-' -'.'  )./ \\::::::'X::::\\` ``` ____");
-                        Console.WriteLine(") \\ ' '//  ///''.__-'--`-\\\\ \\ `__");
-                        Console.WriteLine("|\\' .'/|/  ' '///  ' \"` \\|\\`` -.`--.");
-                        Console.WriteLine("| `.'    /.' )  |(       )``-'  . `.");
-                        Console.WriteLine("J   `.'_.' /  /'''.____.'.'.-'| `.  `");
-                        Console.WriteLine("(`.   `-.') . \" _.' . .'  '  .'`  `.");
-                        Console.WriteLine("|`.\\     \\'  \\  )' |)/    .-' |  .'");
-                        Console.WriteLine("/  `.\\    `.\\  /|.'//  .-'    J /");
-                        Console.WriteLine("     `.     `\\\" )//   //       L");
-                        Console.WriteLine("     _ `     ` . /  .''  _.--''|");
-                        Console.WriteLine("    --._      '|`  .'  .'-\"\"-` |");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        ConsoleHandler.PrintCentered("                           _");
+                        ConsoleHandler.PrintCentered("        __       __       ' `.");
+                        ConsoleHandler.PrintCentered("      .'  `.  .-'\\`-.  ./   |");
+                        ConsoleHandler.PrintCentered("      |     \\-'-'_\\`-`_/    |");
+                        ConsoleHandler.PrintCentered("      |      \\--'-\\-._-.'/  )");
+                        ConsoleHandler.PrintCentered("      \\  \\ .'.'--'|\\`--._`.-'.");
+                        ConsoleHandler.PrintCentered("       )`' .''' .'.-L-.`-.\\ '.");
+                        ConsoleHandler.PrintCentered("      // _'/J '- ///|\\\\\\|-.``.`'.");
+                        ConsoleHandler.PrintCentered("    .'/'/ .'.-`( | '|` ..-.'( L- L");
+                        ConsoleHandler.PrintCentered("   // |J J|]`(\"\\\")\\ J  (\".'`J||- |");
+                        ConsoleHandler.PrintCentered("  / | |) || Y.`.`\\.' -. L'-J|||- -");
+                        ConsoleHandler.PrintCentered(" /. ' |`.J|J\\  ))J'/\"-. \\\\`'/'/-  \\");
+                        ConsoleHandler.PrintCentered("J- -  \\  L\\\\`.-' || .' \\ \\\\`'J J  |");
+                        ConsoleHandler.PrintCentered("|- '_-'. (= `.//.-.__ \" _  L-/.-. |");
+                        ConsoleHandler.PrintCentered("|-      )_\\\\`|...(\\`-.\".''.)/ -.  )---");
+                        ConsoleHandler.PrintCentered("|- ''    )  `\\.::::.`.\\|/.:.'`-  ``--._");
+                        ConsoleHandler.PrintCentered("J-' -'.'  )./ \\::::::'X::::\\` ``` ____");
+                        ConsoleHandler.PrintCentered(") \\ ' '//  ///''.__-'--`-\\\\ \\ `__");
+                        ConsoleHandler.PrintCentered("|\\' .'/|/  ' '///  ' \"` \\|\\`` -.`--.");
+                        ConsoleHandler.PrintCentered("| `.'    /.' )  |(       )``-'  . `.");
+                        ConsoleHandler.PrintCentered("J   `.'_.' /  /'''.____.'.'.-'| `.  `");
+                        ConsoleHandler.PrintCentered("(`.   `-.') . \" _.' . .'  '  .'`  `.");
+                        ConsoleHandler.PrintCentered("|`.\\     \\'  \\  )' |)/    .-' |  .'");
+                        ConsoleHandler.PrintCentered("/  `.\\    `.\\  /|.'//  .-'    J /");
+                        ConsoleHandler.PrintCentered("     `.     \\\" )//   //       L");
+                        ConsoleHandler.PrintCentered("     _ `     ` . /  .''  _.--''|");
+                        ConsoleHandler.PrintCentered("    --._      '|`  .'  .'-\"\"-` |");
                         animal.Play();
+                        Console.ForegroundColor = ConsoleColor.White;
+
                         break;
+
                     case 4:
-                        Console.WriteLine("(^\\-==-/^)");
-                        Console.WriteLine(" >\\\\ == //<");
-                        Console.WriteLine(":== q''p ==:     _");
-                        Console.WriteLine(" .__ qp __.    .' )");
-                        Console.WriteLine("  / ^--^ \\    /\\.'");
-                        Console.WriteLine(" /_`    / )  '\\/");
-                        Console.WriteLine("(  )  \\  |-='-/");
-                        Console.WriteLine(" \\^^,   |-|--'");
-                        Console.WriteLine("( `'    |_| )");
-                        Console.WriteLine(" \\-     |-|/");
-                        Console.WriteLine("(( )^---( ))   ");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        ConsoleHandler.PrintCentered("(^\\-==-/^)");
+                        ConsoleHandler.PrintCentered(" >\\\\ == //<");
+                        ConsoleHandler.PrintCentered(":== q''p ==:     _");
+                        ConsoleHandler.PrintCentered(" .__ qp __.    .' )");
+                        ConsoleHandler.PrintCentered("  / ^--^ \\    /\\.'");
+                        ConsoleHandler.PrintCentered(" /_`    / )  '\\/'");
+                        ConsoleHandler.PrintCentered("(  )  \\  |-='-/");
+                        ConsoleHandler.PrintCentered(" \\^^,   |-|--'");
+                        ConsoleHandler.PrintCentered("( `'    |_| )");
+                        ConsoleHandler.PrintCentered(" \\-     |-|/");
+                        ConsoleHandler.PrintCentered("(( )^---( ))   ");
                         animal.Wash();
+                        Console.ForegroundColor = ConsoleColor.White;
+
                         break;
                     case 5:
-                        Console.WriteLine("        __       __       ' `.");
-                        Console.WriteLine("      .'  `.  .-'\\`-.  ./   |");
-                        Console.WriteLine("      |     \\-'-'_\\`-`_/    |");
-                        Console.WriteLine("      |      \\--'-\\-._-.'/  )");
-                        Console.WriteLine("      \\  \\ .'.'--'|\\`--._`.-'.");
-                        Console.WriteLine("       )`' .''' .'.-L-.`-.\\ '.");
-                        Console.WriteLine("      // _'/J '- ///|\\\\|-.``.`'.");
-                        Console.WriteLine("    .'/'/ .'.-`( | '|` ..-.'( L- L");
-                        Console.WriteLine("   // |J J|]`(\"\")\\ J  (\".'`J||- |");
-                        Console.WriteLine("  / | |) || Y.`.`\\.' -. L'-J|||- -");
-                        Console.WriteLine(" /. ' |`.J|J\\  ))J'/\"-. \\\\`'/'/-  \\");
-                        Console.WriteLine("J- -  \\  L\\\\`.-' || .' \\ \\\\`'J J  |");
-                        Console.WriteLine("|- '_-'. (= `.//.-.__ \" _  L-/.-. |");
-                        Console.WriteLine("|-      )_\\\\`|...(`-.\".''.)/ -.  )---");
-                        Console.WriteLine("|- ''    )  `\\.::::.`.|/.:.'`-  ``--._");
-                        Console.WriteLine("J-' -'.'  )./ \\::::::'X::::\\` ``` ____");
-                        Console.WriteLine(") \\ ' '//  ///''.__-'--`-\\\\ \\ `__");
-                        Console.WriteLine("|\\' .'/|/  ' '///  ' \"` \\|\\`` -.`--.");
-                        Console.WriteLine("| `.'    /.' )  |(       )``-'  . `.");
-                        Console.WriteLine("J   `.'_.' /  /'''.____.'.'.-'| `.  `");
-                        Console.WriteLine("(`.   `-.') . \" _.' . .'  '  .'`  `.");
-                        Console.WriteLine("|`.\\     \\'  \\  )' |)/    .-' |  .'");
-                        Console.WriteLine("/  `.\\    `.\\  /|.'//  .-'    J /");
-                        Console.WriteLine("     `.     \\\" )//   //       L");
-                        Console.WriteLine("     _ `     ` . /  .''  _.--''|");
-                        Console.WriteLine("    --._      '|`  .'  .'-\"\"-` |");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        ConsoleHandler.PrintCentered("        __       __       ' `.");
+                        ConsoleHandler.PrintCentered("      .'  `.  .-'\\`-.  ./   |");
+                        ConsoleHandler.PrintCentered("      |     \\-'-'_\\`-`_/    |");
+                        ConsoleHandler.PrintCentered("      |      \\--'-\\-._-.'/  )");
+                        ConsoleHandler.PrintCentered("      \\  \\ .'.'--'|\\`--._`.-'.");
+                        ConsoleHandler.PrintCentered("       )`' .''' .'.-L-.`-.\\ '.");
+                        ConsoleHandler.PrintCentered("      // _'/J '- ///|\\\\|-.``.`'.");
+                        ConsoleHandler.PrintCentered("    .'/'/ .'.-`( | '|` ..-.'( L- L");
+                        ConsoleHandler.PrintCentered("   // |J J|]`(\"\")\\ J  (\".'`J||- |");
+                        ConsoleHandler.PrintCentered("  / | |) || Y.`.`\\.' -. L'-J|||- -");
+                        ConsoleHandler.PrintCentered(" /. ' |`.J|J\\  ))J'/\"-. \\\\`'/'/-  \\");
+                        ConsoleHandler.PrintCentered("J- -  \\  L\\\\`.-' || .' \\ \\\\`'J J  |");
+                        ConsoleHandler.PrintCentered("|- '_-'. (= `.//.-.__ \" _  L-/.-. |");
+                        ConsoleHandler.PrintCentered("|-      )_\\\\`|...(`-.\".''.)/ -.  )---");
+                        ConsoleHandler.PrintCentered("|- ''    )  `\\.::::.`.|/.:.'`-  ``--._");
+                        ConsoleHandler.PrintCentered("J-' -'.'  )./ \\::::::'X::::\\` ``` ____");
+                        ConsoleHandler.PrintCentered(") \\ ' '//  ///''.__-'--`-\\\\ \\ `__");
+                        ConsoleHandler.PrintCentered("|\\' .'/|/  ' '///  ' \"` \\|\\`` -.`--.");
+                        ConsoleHandler.PrintCentered("| `.'    /.' )  |(       )``-'  . `.");
+                        ConsoleHandler.PrintCentered("J   `.'_.' /  /'''.____.'.'.-'| `.  `");
+                        ConsoleHandler.PrintCentered("(`.   `-.') . \" _.' . .'  '  .'`  `.");
+                        ConsoleHandler.PrintCentered("|`.\\     \\'  \\  )' |)/    .-' |  .'");
+                        ConsoleHandler.PrintCentered("/  `.\\    `.\\  /|.'//  .-'    J /");
+                        ConsoleHandler.PrintCentered("     `.     \\\" )//   //       L");
+                        ConsoleHandler.PrintCentered("     _ `     ` . /  .''  _.--''|");
+                        ConsoleHandler.PrintCentered("    --._      '|`  .'  .'-\"\"-` |");
+                        Console.ForegroundColor = ConsoleColor.White;
+
                         animal.Eat();
+
                         break;
                     case 6:
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        ConsoleHandler.PrintCentered("             .-.       .-.");
+                        ConsoleHandler.PrintCentered("            (   \\_.-._/   )");
+                        ConsoleHandler.PrintCentered("             \\           /");
+                        ConsoleHandler.PrintCentered("             | __     __ |");
+                        ConsoleHandler.PrintCentered("             | \\O\\   /O/ |");
+                        ConsoleHandler.PrintCentered("              \\  \"   \"  /");
+                        ConsoleHandler.PrintCentered("              /\\_`-v-'_/\\");
+                        ConsoleHandler.PrintCentered("             /  \\._|_./  \\");
+                        ConsoleHandler.PrintCentered("            |    \\___/    |");
+                        ConsoleHandler.PrintCentered("            |             |");
+                        ConsoleHandler.PrintCentered("            |             |");
+                        ConsoleHandler.PrintCentered("            |   |     |   |");
+                        ConsoleHandler.PrintCentered("  .ww.     _|   |     |   |_");
+                        ConsoleHandler.PrintCentered(".\\WWW=    / |   |     |   | \\");
+                        ConsoleHandler.PrintCentered("\\WWW=    |  |   |     |   |  |");
+                        ConsoleHandler.PrintCentered("\\WW=     |  |   |     |   |  |");
+                        ConsoleHandler.PrintCentered("( (      |  |   \\     /   |  |");
+                        ConsoleHandler.PrintCentered(" \\ \\___.-'\\  \\   \\   /   /  /");
+                        ConsoleHandler.PrintCentered("  `-.__.-(...(...)---(...)...)");
+                        Console.ForegroundColor = ConsoleColor.White;
+
                         animal.Heal();
+
                         break;
                     case 7:
-                        Console.WriteLine("Save file name: ");
+                        Console.Clear();
+
+                        ConsoleHandler.PrintCentered("Save file name: ");
 
                         string fileName = Console.ReadLine();
 
@@ -259,9 +310,34 @@ namespace Tamagotchi_Library.GameManagement
             }
             else
             {
-                Console.WriteLine("Invalid input. Doing nothing.");
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                ConsoleHandler.PrintCentered("             .-.       .-.");
+                ConsoleHandler.PrintCentered("            (   \\_.-._/   )");
+                ConsoleHandler.PrintCentered("             \\           /");
+                ConsoleHandler.PrintCentered("             | __     __ |");
+                ConsoleHandler.PrintCentered("             | \\O\\   /O/ |");
+                ConsoleHandler.PrintCentered("              \\  \"   \"  /");
+                ConsoleHandler.PrintCentered("              /\\_`-v-'_/\\");
+                ConsoleHandler.PrintCentered("             /  \\._|_./  \\");
+                ConsoleHandler.PrintCentered("            |    \\___/    |");
+                ConsoleHandler.PrintCentered("            |             |");
+                ConsoleHandler.PrintCentered("            |             |");
+                ConsoleHandler.PrintCentered("            |   |     |   |");
+                ConsoleHandler.PrintCentered("  .ww.     _|   |     |   |_");
+                ConsoleHandler.PrintCentered(".\\WWW=    / |   |     |   | \\");
+                ConsoleHandler.PrintCentered("\\WWW=    |  |   |     |   |  |");
+                ConsoleHandler.PrintCentered("\\WW=     |  |   |     |   |  |");
+                ConsoleHandler.PrintCentered("( (      |  |   \\     /   |  |");
+                ConsoleHandler.PrintCentered(" \\ \\___.-'\\  \\   \\   /   /  /");
+                ConsoleHandler.PrintCentered("  `-.__.-(...(...)---(...)...)");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                ConsoleHandler.PrintCentered("Invalid input. Doing nothing.");
             }
-            Console.WriteLine("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) heal(6) Save and exit(7)");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            ConsoleHandler.PrintCentered("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) heal(6) Save and exit(7)");
+            Console.ForegroundColor = ConsoleColor.White;
 
         }
 

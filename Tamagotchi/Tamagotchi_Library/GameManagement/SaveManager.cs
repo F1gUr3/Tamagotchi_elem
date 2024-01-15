@@ -69,7 +69,7 @@ namespace Tamagotchi_Library.GameManagement
         {
             if (File.Exists(filepPath))
             {
-                Console.WriteLine($"File '{filepPath}' already exists in the current directory.");
+                ConsoleHandler.PrintCentered($"File '{filepPath}' already exists in the current directory.");
                 Console.Write("Do you want to overwrite it? (Y/N): ");
 
                 char response = Char.ToUpper(Console.ReadKey().KeyChar);
@@ -80,8 +80,8 @@ namespace Tamagotchi_Library.GameManagement
                 }
                 else if(response == 'N')
                 {
-                    Console.WriteLine("\nFile creation aborted.");
-                    Console.WriteLine("Try again save file name: ");
+                    ConsoleHandler.PrintCentered("\nFile creation aborted.");
+                    ConsoleHandler.PrintCentered("Try again save file name: ");
                     string fileName = Console.ReadLine() + ".json";
                     savePrompt(fileName);
 
@@ -109,23 +109,24 @@ namespace Tamagotchi_Library.GameManagement
             string[] jsonFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.json");
             if (jsonFiles.Length > 0)
             {
-                Console.WriteLine("Save files: ");
+                ConsoleHandler.PrintCentered("Save files: ");
                 foreach (string jsonFile in jsonFiles)
                 {
                     if (!jsonFile.EndsWith("Tamagotchi_Console.deps.json") &&
                         !jsonFile.EndsWith("Tamagotchi_Console.runtimeconfig.json"))
                     {
                         string filename = Path.GetFileName(jsonFile);
-                        Console.WriteLine(filename);
+                        ConsoleHandler.PrintCentered(filename);
                     }
                 }
             }
             else
             {
-                Console.WriteLine("No save files found.");
+                ConsoleHandler.PrintCentered("No save files found.");
             }
 
             string chosenSave = Console.ReadLine();
+
             return loadFromJson(chosenSave);
         }
         public IFeline loadFromJson(string filePath)
