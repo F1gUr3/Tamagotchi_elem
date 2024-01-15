@@ -99,10 +99,14 @@ namespace Tamagotchi_Library.GameManagement
             }
         }
 
-        public IFeline choosePet(string nameOfTamagotchi)
+        public IFeline choosePet(string nameOfTamagotchi, string petOfChoice = null)
         {
-            ConsoleHandler.PrintCentered("Choose the type of pet: (1) Tiger, (2), Panther, (3) Lion");
-            string petOfChoice = Console.ReadLine();
+            if(petOfChoice == null)
+            {
+                ConsoleHandler.PrintCentered("Choose the type of pet: (1) Tiger, (2), Panther, (3) Lion");
+                petOfChoice = Console.ReadLine();
+            }
+            
             IFeline tamagotchi = null;
 
             switch (petOfChoice)

@@ -4,8 +4,11 @@ using Tamagotchi_Library.GameManagement;
 namespace TestTamagotchi;
 
 [TestClass]
-public class GameManager
+public class GameManagerTest
 {
+    GameManager gameManager = new GameManager();
+
+
     [TestMethod]
     public void TimePassUpdate_FrissitiAzIdoElteltet()
     {
@@ -23,4 +26,31 @@ public class GameManager
         // Assert
         Assert.AreEqual(expectedHunger, int.Parse(info[2]));
     }
+
+    [TestMethod]
+    public void ChoosePet_ReturnsCorrectPetInstance()
+    {
+        string petName = "TestPet";
+
+            
+            IFeline pet = gameManager.choosePet(petName, "1");
+
+            Assert.IsNotNull(pet);
+            Assert.AreEqual(petName, pet.getFelineInfo()[0]);
+        
+    }
+
+    [TestMethod]
+    public void ChoosePet_CreatesCorrectTypeInstance()
+    {
+        string petName = "tigerTest";
+        IFeline pet = gameManager.choosePet(petName, "1");
+
+        Assert.IsNotNull(pet);
+        Assert.AreEqual("Tiger", pet.getFelineInfo()[5]);
+
+
+    }
+
+
 }
