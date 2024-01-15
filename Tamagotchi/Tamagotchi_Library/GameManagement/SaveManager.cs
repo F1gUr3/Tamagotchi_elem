@@ -78,7 +78,7 @@ namespace Tamagotchi_Library.GameManagement
                 {
                     saveToJson(filepPath);
                 }
-                else
+                else if(response == 'N')
                 {
                     Console.WriteLine("\nFile creation aborted.");
                     Console.WriteLine("Try again save file name: ");
@@ -87,6 +87,11 @@ namespace Tamagotchi_Library.GameManagement
 
 
                 }
+                
+            }
+            else
+            {
+                saveToJson(filepPath);
             }
         }
 
@@ -96,7 +101,7 @@ namespace Tamagotchi_Library.GameManagement
 
             string json = JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping });
            
-            File.WriteAllText(filePath, json);
+            File.WriteAllText(filePath + ".json", json);
         }
 
         public IFeline loadPrompt()
@@ -125,7 +130,6 @@ namespace Tamagotchi_Library.GameManagement
             try
             {
                 string json = File.ReadAllText(filePath);
-                Console.WriteLine(json);
                 int startIndex = json.IndexOf("\"type\": \"") + ("\"type\": \"").Length;
                 int endIndex = json.IndexOf("\"", startIndex + 1);
                 string type = json.Substring(startIndex, endIndex - startIndex);

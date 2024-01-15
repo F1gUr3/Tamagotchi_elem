@@ -85,6 +85,7 @@ namespace Tamagotchi_Library.GameManagement
         }
         public void gameProgress(IFeline animal)
         {
+
             animal.Progress();
 
             //ASCII SOURCE: https://ascii.co.uk/art/tiger
@@ -199,7 +200,7 @@ namespace Tamagotchi_Library.GameManagement
                     case 6:
                         Console.WriteLine("Save file name: ");
 
-                        string fileName = Console.ReadLine() + ".json";
+                        string fileName = Console.ReadLine();
 
                         saveManager.savePrompt(fileName);
                         hasExit = true;
