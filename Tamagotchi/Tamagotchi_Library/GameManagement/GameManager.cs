@@ -12,11 +12,52 @@ namespace Tamagotchi_Library.GameManagement
         private bool hasExit = false;
         private SaveManager? saveManager;
 
+        private void PrintCentered(string text)
+        {
+            int width = Console.WindowWidth;
+            int leftPadding = (width - text.Length) / 2;
+            Console.SetCursorPosition(leftPadding, Console.CursorTop);
+            Console.WriteLine(text);
+        }
 
         public void startGame()
         {
-            Console.WriteLine("Welcome to the tamagotchi simulator: Start new Game (1) or load game (2)");
-            int userInput = int.Parse(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            PrintCentered("Welcome to the feline pet simulator \n");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            PrintCentered(": Start new Game (1) \n");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            PrintCentered(": Load Game (2)");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            PrintCentered(",\\/~~~\\_                            _/~~~~\\");
+            PrintCentered("|  ---, `\\_    ___,-------~~\\__  /~' ,,''  |");
+            PrintCentered("| `~`, ',,\\`-~~--_____    ---  - /, ,--/ '/'");
+            PrintCentered("`\\_|\\ _\\`    ______,---~~~\\  ,_   '\\_/' /'");
+            PrintCentered("  \\,_|   , '~,'~/~   /~\\ ,_  `\\_ \\_  \\_\\'");
+            PrintCentered("    ,/   /' ,/' _,-'~~  `\\  ~~\\_ ,_  `\\  `\\");
+            PrintCentered("  /@@ _/  /' ./',-                 \\       `@,");
+            PrintCentered(" @@ '   |  ___/  /'  /  \\  \\ '__ _`~|, `, @@");
+            PrintCentered("/@@ /  | | ',___  |  |    `  | ,,---,  |  | `@@,");
+            PrintCentered("@@@ \\  | | \\ \\O_\\ |        / / O_/' | \\  \\  @@@");
+            PrintCentered("@@@ |  | `| '   ~ / ,          ~     /  |    @@@");
+            PrintCentered("`@@ |   \\ `\\     ` |         | |  _/'  /'  | @@'");
+            PrintCentered(" @@ |    ~\\ /--'~  |       , |  \\__   |    | |@@");
+            PrintCentered(" @@, \\     | ,,|   |       ,,|   | `\\     /',@@");
+            PrintCentered("`@@, ~\\   \\ '     ` |       / /    `' '   / ,@@");
+            PrintCentered(" @@@,    \\    ~~\\ `\\/~---'~/' _ /'~~~~~~~~--,");
+            PrintCentered("  `@@@_,---::::::=  `-_,| ,~  _=:::::''''    `");
+            PrintCentered("  ,/~~_---'_,-___     _-__  ' -~~~\\_```---");
+            PrintCentered("    ~`   ~~_/'// _,--~\\_/ '~--, |\\_");
+            PrintCentered("         /' /'| `@@@@@,,,,,@@@@  | \\   -Chevalier-");
+            PrintCentered("              `     `@@@@@@'");
+
+            Console.ForegroundColor = ConsoleColor.White;
+        int userInput = int.Parse(Console.ReadLine());
             if (userInput == 1)
             {
                 newGame();
@@ -30,6 +71,8 @@ namespace Tamagotchi_Library.GameManagement
                 Console.WriteLine("Incorrect input!");
                 startGame();
             }
+
+            Console.Clear();
         }
         public void newGame()
         {
