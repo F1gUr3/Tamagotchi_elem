@@ -86,24 +86,114 @@ namespace Tamagotchi_Library.GameManagement
         public void gameProgress(IFeline animal)
         {
             animal.Progress();
-            Console.WriteLine("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) Save and exit(6)");
+
+            //ASCII SOURCE: https://ascii.co.uk/art/tiger
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
                 switch (choice)
                 {
                     case 1:
+                        Console.WriteLine("                         __,,,,_");
+                        Console.WriteLine("          _ __..-;''`--/'/ /.',-`-.");
+                        Console.WriteLine("      (`/' ` |  \\ \\ \\\\ / / / / .-'/`,_");
+                        Console.WriteLine("     /'`\\ \\   |  \\ | \\| // // / -.,/_,'-,");
+                        Console.WriteLine("    /<7' ;  \\ \\  | ; ||/ /| | \\/    |`-/,/-.,_,/'");
+                        Console.WriteLine("   /  _.-, `,-\\,__|  _-| / \\ \\/|_/  |    '-/.;.'\\'");
+                        Console.WriteLine("   `-`  f/ ;      / __/ \\__ `/ |__/ |");
+                        Console.WriteLine("        `-'      |  -| =|\\_  \\  |-' |");
+                        Console.WriteLine("              __/   /_..-' `  ),'  //");
+                        Console.WriteLine("          fL ((__.-'((___..-'' \\__.'");
+
                         animal.Drink();
                         break;
                     case 2:
+                        Console.WriteLine(" _");
+                        Console.WriteLine("  ( \\                ..-----..__");
+                        Console.WriteLine("   \\.'.        _.--'`  [   '  ' ```'-._");
+                        Console.WriteLine("    `. `'-..-'' `    '  ' '   .  ;   ; `-'''-.,__/|/_");
+                        Console.WriteLine("      `'-.;..-''`|'  `.  '.    ;     '  `    '   `'  `,");
+                        Console.WriteLine("                 \\ '   .    ' .     '   ;   .`   . ' 7 \\");
+                        Console.WriteLine("                  '.' . '- . \\    .`   .`  .   .\\     `Y");
+                        Console.WriteLine("                    '-.' .   ].  '   ,    '    /'`\"\"';:'");
+                        Console.WriteLine("                      /Y   '.] '-._ /    ' _.-'");
+                        Console.WriteLine("                      \\'\\_   ; (`'.'.'  .\"/");
+                        Console.WriteLine("                       ' )` /  `.'   .-'.");
+                        Console.WriteLine("                        '\\  \\).'  .-'--\"");
+                        Console.WriteLine("                          `. `,_'`");
+                        Console.WriteLine("                            `.__)  AsH/sk");
                         animal.Hunt();
                         break;
                     case 3:
+                        Console.WriteLine("                           _");
+                        Console.WriteLine("        __       __       ' `.");
+                        Console.WriteLine("      .'  `.  .-'\\`-.  ./   |");
+                        Console.WriteLine("      |     \\-'-'_\\`-`_/    |");
+                        Console.WriteLine("      |      \\--'-\\-._-.'/  )");
+                        Console.WriteLine("      \\  \\ .'.'--'|\\`--._`.-'.");
+                        Console.WriteLine("       )`' .''' .'.-L-.`-.\\ '.");
+                        Console.WriteLine("      // _'/J '- ///|\\\\\\|-.``.`'.");
+                        Console.WriteLine("    .'/'/ .'.-`( | '|` ..-.'( L- L");
+                        Console.WriteLine("   // |J J|]`(\"\\\")\\ J  (\".'`J||- |");
+                        Console.WriteLine("  / | |) || Y.`.`\\.' -. L'-J|||- -");
+                        Console.WriteLine(" /. ' |`.J|J\\  ))J'/\"-. \\\\`'/'/-  \\");
+                        Console.WriteLine("J- -  \\  L\\\\`.-' || .' \\ \\\\`'J J  |");
+                        Console.WriteLine("|- '_-'. (= `.//.-.__ \" _  L-/.-. |");
+                        Console.WriteLine("|-      )_\\\\`|...(\\`-.\".''.)/ -.  )---");
+                        Console.WriteLine("|- ''    )  `\\.::::.`.\\|/.:.'`-  ``--._");
+                        Console.WriteLine("J-' -'.'  )./ \\::::::'X::::\\` ``` ____");
+                        Console.WriteLine(") \\ ' '//  ///''.__-'--`-\\\\ \\ `__");
+                        Console.WriteLine("|\\' .'/|/  ' '///  ' \"` \\|\\`` -.`--.");
+                        Console.WriteLine("| `.'    /.' )  |(       )``-'  . `.");
+                        Console.WriteLine("J   `.'_.' /  /'''.____.'.'.-'| `.  `");
+                        Console.WriteLine("(`.   `-.') . \" _.' . .'  '  .'`  `.");
+                        Console.WriteLine("|`.\\     \\'  \\  )' |)/    .-' |  .'");
+                        Console.WriteLine("/  `.\\    `.\\  /|.'//  .-'    J /");
+                        Console.WriteLine("     `.     `\\\" )//   //       L");
+                        Console.WriteLine("     _ `     ` . /  .''  _.--''|");
+                        Console.WriteLine("    --._      '|`  .'  .'-\"\"-` |");
                         animal.Play();
                         break;
                     case 4:
+                        Console.WriteLine("(^\\-==-/^)");
+                        Console.WriteLine(" >\\\\ == //<");
+                        Console.WriteLine(":== q''p ==:     _");
+                        Console.WriteLine(" .__ qp __.    .' )");
+                        Console.WriteLine("  / ^--^ \\    /\\.'");
+                        Console.WriteLine(" /_`    / )  '\\/");
+                        Console.WriteLine("(  )  \\  |-='-/");
+                        Console.WriteLine(" \\^^,   |-|--'");
+                        Console.WriteLine("( `'    |_| )");
+                        Console.WriteLine(" \\-     |-|/");
+                        Console.WriteLine("(( )^---( )) sk");
                         animal.Wash();
                         break;
                     case 5:
+                        Console.WriteLine("        __       __       ' `.");
+                        Console.WriteLine("      .'  `.  .-'\\`-.  ./   |");
+                        Console.WriteLine("      |     \\-'-'_\\`-`_/    |");
+                        Console.WriteLine("      |      \\--'-\\-._-.'/  )");
+                        Console.WriteLine("      \\  \\ .'.'--'|\\`--._`.-'.");
+                        Console.WriteLine("       )`' .''' .'.-L-.`-.\\ '.");
+                        Console.WriteLine("      // _'/J '- ///|\\\\|-.``.`'.");
+                        Console.WriteLine("    .'/'/ .'.-`( | '|` ..-.'( L- L");
+                        Console.WriteLine("   // |J J|]`(\"\")\\ J  (\".'`J||- |");
+                        Console.WriteLine("  / | |) || Y.`.`\\.' -. L'-J|||- -");
+                        Console.WriteLine(" /. ' |`.J|J\\  ))J'/\"-. \\\\`'/'/-  \\");
+                        Console.WriteLine("J- -  \\  L\\\\`.-' || .' \\ \\\\`'J J  |");
+                        Console.WriteLine("|- '_-'. (= `.//.-.__ \" _  L-/.-. |");
+                        Console.WriteLine("|-      )_\\\\`|...(`-.\".''.)/ -.  )---");
+                        Console.WriteLine("|- ''    )  `\\.::::.`.|/.:.'`-  ``--._");
+                        Console.WriteLine("J-' -'.'  )./ \\::::::'X::::\\` ``` ____");
+                        Console.WriteLine(") \\ ' '//  ///''.__-'--`-\\\\ \\ `__");
+                        Console.WriteLine("|\\' .'/|/  ' '///  ' \"` \\|\\`` -.`--.");
+                        Console.WriteLine("| `.'    /.' )  |(       )``-'  . `.");
+                        Console.WriteLine("J   `.'_.' /  /'''.____.'.'.-'| `.  `");
+                        Console.WriteLine("(`.   `-.') . \" _.' . .'  '  .'`  `.");
+                        Console.WriteLine("|`.\\     \\'  \\  )' |)/    .-' |  .'");
+                        Console.WriteLine("/  `.\\    `.\\  /|.'//  .-'    J /");
+                        Console.WriteLine("     `.     \\\" )//   //       L");
+                        Console.WriteLine("     _ `     ` . /  .''  _.--''|");
+                        Console.WriteLine("    --._      '|`  .'  .'-\"\"-` |");
                         animal.Eat();
                         break;
                     case 6:
@@ -123,8 +213,10 @@ namespace Tamagotchi_Library.GameManagement
             {
                 Console.WriteLine("Invalid input. Doing nothing.");
             }
+            Console.WriteLine("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) Save and exit(6)");
+
         }
-    
+
 
 
     }
