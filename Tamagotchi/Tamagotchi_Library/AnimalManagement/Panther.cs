@@ -190,7 +190,7 @@ public class Panther : IFeline
         }
     }
 
-    private void Eat()
+    public void Eat()
     {
         happiness = Math.Min(happiness + 5, MaxValue);
         hunger = Math.Min(hunger + 20, MaxValue);

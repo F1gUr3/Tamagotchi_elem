@@ -15,7 +15,7 @@ public class Lion : IFeline
     private bool isResting;
     private bool isHunting;
 
-    private const int MaxValue = 100;
+    public const int MaxValue = 100;
 
     public Lion(string name)
     {
@@ -101,6 +101,7 @@ public class Lion : IFeline
             CheckNeeds();
         }
     }
+
 
     public void Hunt()
     {
@@ -190,7 +191,7 @@ public class Lion : IFeline
         }
     }
 
-    private void Eat()
+    public void Eat()
     {
         happiness = Math.Min(happiness + 5, MaxValue);
         hunger = Math.Min(hunger + 20, MaxValue);
