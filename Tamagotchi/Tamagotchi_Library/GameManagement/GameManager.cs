@@ -50,6 +50,7 @@ namespace Tamagotchi_Library.GameManagement
         {
             saveManager = new SaveManager();
             IFeline tamagotchi = saveManager.LoadPrompt();
+            saveManager = new SaveManager(tamagotchi);
             while (!hasExit)
             {
                 gameProgress(tamagotchi);

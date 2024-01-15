@@ -37,7 +37,7 @@ namespace Tamagotchi_Library.GameManagement
  
            felineData = toSave.getFelineInfo();
            name = felineData[0];
-           age = int.Parse(felineData[1]);
+           age = float.Parse(felineData[1]);
            hunger = int.Parse(felineData[2]);
            thirst = int.Parse(felineData[3]);
            happiness = int.Parse(felineData[4]);
