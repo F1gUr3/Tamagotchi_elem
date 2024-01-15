@@ -68,10 +68,10 @@ namespace Tamagotchi_Library.GameManagement
                     tamagotchi = new Tiger(nameOfTamagotchi);
                     break;
                 case "2":
-                    tamagotchi = new Tiger(nameOfTamagotchi);
+                    tamagotchi = new Panther(nameOfTamagotchi);
                     break;
                 case "3":
-                    tamagotchi = new Tiger(nameOfTamagotchi);
+                    tamagotchi = new Lion(nameOfTamagotchi);
                     break;
                 default:
                     Console.WriteLine("Bad input! Try a number between 1-3!");
