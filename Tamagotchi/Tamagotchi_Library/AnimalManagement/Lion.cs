@@ -15,13 +15,15 @@ public class Lion : IFeline
     private bool isResting;
     private bool isHunting;
 
+    private const int MaxValue = 100;
+
     public Lion(string name)
     {
         Name = name;
         age = 0;
-        hunger = 100;
-        thirst = 100;
-        happiness = 100;
+        hunger = MaxValue;
+        thirst = MaxValue;
+        happiness = MaxValue;
         isSick = false;
         isResting = false;
         isHunting = false;
@@ -44,11 +46,24 @@ public class Lion : IFeline
 
 
     }
-
+    public void PassiveProgress(int elapsedHours)
+    {
+        age = (float)(age + elapsedHours * 0.25);
+        hunger = hunger - (int)elapsedHours * 2;
+        thirst = thirst - (int)elapsedHours * 4;
+        happiness = happiness - (int)elapsedHours * 4;
+    }
     public void Progress()
     {
-        age++;
-        Console.WriteLine($"Animal is now {age} years old.");
+        age = (float)(age + 0.25);
+        if (age / 1 == 0)
+        {
+            Console.WriteLine($"Animal is now {age} years old.");
+        }
+        else
+        {
+            Console.WriteLine($"Animal is now {Math.Ceiling(age)} years old.");
+        }
         if (age >= 1 && age <= 10 && IsRandomlySick())
         {
             Console.WriteLine("The animal is sick and needs rest.");
@@ -60,6 +75,8 @@ public class Lion : IFeline
             isSick = true;
         }
 
+
+
         if (isResting)
         {
             Console.WriteLine("Animal is still resting.");
@@ -70,23 +87,16 @@ public class Lion : IFeline
         if (isHunting)
         {
             Console.WriteLine("Animal is still hunting.");
-            Thread.Sleep(1000); // Sleep for 5 seconds
             isHunting = false;
-
         }
-
-        
-
-
-
-       
     }
 
     public void Drink()
     {
         if (!isResting)
         {
-            thirst -= 5;
+            thirst = Math.Min(thirst + 5, MaxValue);
+            happiness = Math.Min(happiness + 5, MaxValue);
             Console.WriteLine("Animal is drinking.");
             CheckNeeds();
         }
@@ -106,7 +116,7 @@ public class Lion : IFeline
             {
                 Console.WriteLine("Animal is hunting.");
                 isHunting = true;
-                happiness += 10;
+                happiness = Math.Min(happiness + 5, MaxValue);
                 thirst -= 10;
                 hunger -= 15;
                 CheckNeeds();
@@ -117,8 +127,7 @@ public class Lion : IFeline
     public void Wash()
     {
         Console.WriteLine("Animal is washing.");
-        happiness += 5;
-        Thread.Sleep(5000); // Sleep for 5 seconds
+        happiness = Math.Min(happiness + 5, MaxValue);
         CheckNeeds();
     }
 
@@ -128,8 +137,7 @@ public class Lion : IFeline
         {
             if (age < 10)
             {
-                Console.WriteLine("Animal is playing.");
-                happiness += 15;
+                happiness = Math.Min(happiness + 15, MaxValue);
                 thirst -= 5;
                 hunger -= 5;
                 CheckNeeds();
@@ -145,15 +153,16 @@ public class Lion : IFeline
         }
     }
 
-    public void Heal()
+    public async void Heal()
     {
-        Console.WriteLine("Animal is resting and healing.");
-        happiness += 10;
+        happiness = Math.Min(happiness + 10, MaxValue);
         isResting = true;
         isSick = false;
-        Thread.Sleep(10000); // Sleep for 10 seconds
-        CheckNeeds();
+        await Task.Delay(1000);
+        isResting = false;
+
     }
+
 
     public void Die()
     {
@@ -183,30 +192,20 @@ public class Lion : IFeline
 
     private void Eat()
     {
-        Console.WriteLine("Animal is eating.");
-        hunger += 20;
+        happiness = Math.Min(happiness + 5, MaxValue);
+        hunger = Math.Min(hunger + 20, MaxValue);
         CheckNeeds();
     }
 
     private bool IsRandomlySick()
     {
 
-        return new Random().Next(1, 6) == 1;
+        return new Random().Next(1, 20) == 1;
     }
 
     void IFeline.Eat()
     {
-        Console.WriteLine("Animal is eating.");
-        hunger += 20;
-        CheckNeeds();
-    }
-
-    public void PassiveProgress(int elapsedHours)
-    {
-        age = (float)(age + elapsedHours * 0.25);
-        hunger = hunger - (int)elapsedHours * 2;
-        thirst = thirst - (int)elapsedHours * 4;
-        happiness = happiness - (int)elapsedHours * 4;
+        Eat();
     }
 }
 

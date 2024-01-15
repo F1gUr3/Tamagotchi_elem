@@ -66,3 +66,16 @@ D:\lukacsi_adrian\segitseg\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Deb
 D:\lukacsi_adrian\segitseg\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\refint\Tamagotchi_Library.dll
 D:\lukacsi_adrian\segitseg\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.pdb
 D:\lukacsi_adrian\segitseg\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\ref\Tamagotchi_Library.dll
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\Tiger.cs
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\AnimalManagement\IFeline.cs
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.deps.json
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.dll
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\bin\Debug\net7.0\Tamagotchi_Library.pdb
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.AssemblyInfoInputs.cache
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.AssemblyInfo.cs
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.csproj.CoreCompileInputs.cache
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.dll
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\refint\Tamagotchi_Library.dll
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\Tamagotchi_Library.pdb
+D:\MagyarDavid\Tamagotchi_elem\Tamagotchi\Tamagotchi_Library\obj\Debug\net7.0\ref\Tamagotchi_Library.dll

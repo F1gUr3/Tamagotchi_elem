@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yiugt2MbOH9XeTpD8Byv10lrCVU1KurARKQ2EPlD4d7jcZl6EYebayr+7BDiLive9uxTsLdYCLQAMNVWn3zv0A==",
+  "dgSpecHash": "ieu8E5ZOhGkG/hkuBU4AZhBtSxqduRSiWXjBxOpabTAoyp8RTr4UfK4SeJwoKpo7k+ccfTViTHRwwR5jRtWlng==",
   "success": true,
-  "projectFilePath": "D:\\lukacsi_adrian\\segitseg\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
+  "projectFilePath": "D:\\MagyarDavid\\Tamagotchi_elem\\Tamagotchi\\Tamagotchi_Test\\Tamagotchi_Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Suli\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Suli\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",

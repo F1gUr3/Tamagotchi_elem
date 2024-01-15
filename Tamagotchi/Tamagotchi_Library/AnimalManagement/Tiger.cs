@@ -55,8 +55,15 @@ public class Tiger : IFeline
     }
     public void Progress()
     {
-        age++;
-        Console.WriteLine($"Animal is now {age} years old.");
+        age = (float)(age +  0.25);
+        if (age / 1 ==0)
+        {
+            Console.WriteLine($"Animal is now {age} years old.");
+        }
+        else
+        {
+            Console.WriteLine($"Animal is now {Math.Ceiling(age)} years old.");
+        }
         if (age >= 1 && age <= 10 && IsRandomlySick())
         {
             Console.WriteLine("The animal is sick and needs rest.");
@@ -193,7 +200,7 @@ public class Tiger : IFeline
     private bool IsRandomlySick()
     {
 
-        return new Random().Next(1, 6) == 1;
+        return new Random().Next(1, 20) == 1;
     }
 
     void IFeline.Eat()

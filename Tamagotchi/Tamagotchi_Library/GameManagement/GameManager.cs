@@ -99,10 +99,10 @@ namespace Tamagotchi_Library.GameManagement
                         Console.WriteLine("     /'`\\ \\   |  \\ | \\| // // / -.,/_,'-,");
                         Console.WriteLine("    /<7' ;  \\ \\  | ; ||/ /| | \\/    |`-/,/-.,_,/'");
                         Console.WriteLine("   /  _.-, `,-\\,__|  _-| / \\ \\/|_/  |    '-/.;.'\\'");
-                        Console.WriteLine("   `-`  f/ ;      / __/ \\__ `/ |__/ |");
+                        Console.WriteLine("   `-`  ( / ;      / __/ \\__ `/ |__/ |");
                         Console.WriteLine("        `-'      |  -| =|\\_  \\  |-' |");
                         Console.WriteLine("              __/   /_..-' `  ),'  //");
-                        Console.WriteLine("          fL ((__.-'((___..-'' \\__.'");
+                        Console.WriteLine("             ((__.-'((___..-'' \\__.'");
 
                         animal.Drink();
                         break;
@@ -120,7 +120,7 @@ namespace Tamagotchi_Library.GameManagement
                         Console.WriteLine("                       ' )` /  `.'   .-'.");
                         Console.WriteLine("                        '\\  \\).'  .-'--\"");
                         Console.WriteLine("                          `. `,_'`");
-                        Console.WriteLine("                            `.__)  AsH/sk");
+                        Console.WriteLine("                            `.__)     ");
                         animal.Hunt();
                         break;
                     case 3:
@@ -164,7 +164,7 @@ namespace Tamagotchi_Library.GameManagement
                         Console.WriteLine(" \\^^,   |-|--'");
                         Console.WriteLine("( `'    |_| )");
                         Console.WriteLine(" \\-     |-|/");
-                        Console.WriteLine("(( )^---( )) sk");
+                        Console.WriteLine("(( )^---( ))   ");
                         animal.Wash();
                         break;
                     case 5:
@@ -197,6 +197,9 @@ namespace Tamagotchi_Library.GameManagement
                         animal.Eat();
                         break;
                     case 6:
+                        animal.Heal();
+                        break;
+                    case 7:
                         Console.WriteLine("Save file name: ");
 
                         string fileName = Console.ReadLine() + ".json";
