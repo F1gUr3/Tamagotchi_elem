@@ -217,7 +217,7 @@ namespace Tamagotchi_Library.GameManagement
             {
                 Console.WriteLine("Invalid input. Doing nothing.");
             }
-            Console.WriteLine("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) Save and exit(6)");
+            Console.WriteLine("Controls: Drink(1) Hunt(2) Play(3) Wash(4) Eat(5) heal(6) Save and exit(7)");
 
         }
 
