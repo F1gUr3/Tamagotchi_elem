@@ -104,7 +104,7 @@ namespace Tamagotchi_Library.GameManagement
             File.WriteAllText(filePath + ".json", json);
         }
 
-        public IFeline loadPrompt()
+        public IFeline LoadPrompt()
         {
             string[] jsonFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.json");
             if (jsonFiles.Length > 0)
@@ -112,17 +112,21 @@ namespace Tamagotchi_Library.GameManagement
                 Console.WriteLine("Save files: ");
                 foreach (string jsonFile in jsonFiles)
                 {
-                    Console.WriteLine(jsonFile);
+                    if (!jsonFile.EndsWith("Tamagotchi_Console.deps.json") &&
+                        !jsonFile.EndsWith("Tamagotchi_Console.runtimeconfig.json"))
+                    {
+                        string filename = Path.GetFileName(jsonFile);
+                        Console.WriteLine(filename);
+                    }
                 }
             }
             else
             {
                 Console.WriteLine("No save files found.");
             }
+
             string chosenSave = Console.ReadLine();
             return loadFromJson(chosenSave);
-
-
         }
         public IFeline loadFromJson(string filePath)
         {
