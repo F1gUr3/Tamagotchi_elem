@@ -49,7 +49,7 @@ namespace Tamagotchi_Library.GameManagement
         public void loadGame()
         {
             saveManager = new SaveManager();
-            IFeline tamagotchi = saveManager.loadPrompt();
+            IFeline tamagotchi = saveManager.LoadPrompt();
             while (!hasExit)
             {
                 gameProgress(tamagotchi);
